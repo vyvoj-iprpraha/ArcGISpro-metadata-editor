@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "IPRMetadata": {
+      "commandName": "Executable",
+      "executablePath": "C:\\esrri\\ArcGIS\\Pro\\bin\\ArcGISPro.exe"
+    }
+  }
+}
