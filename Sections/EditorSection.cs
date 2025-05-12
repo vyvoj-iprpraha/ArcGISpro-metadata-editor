@@ -11,33 +11,34 @@ See the License for the specific language governing permissions and
 limitations under the License.​
 */
 
-using ArcGIS.Desktop.Metadata;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
+using ArcGIS.Desktop.Metadata;
+
 namespace IPRMetadata.Sections
 {
-    internal abstract class EditorSection : ISidebarLabel
+  abstract class EditorSection : ISidebarLabel
+  {
+    private string _sidebarLabel = null;
+
+    protected abstract string ResourceID
     {
-        private string _sidebarLabel = null;
-
-        protected abstract string ResourceID
-        {
-            get;
-        }
-
-        public string SidebarLabel
-        {
-            get
-            {
-                if (null == _sidebarLabel)
-                {
-                    _sidebarLabel = Utils.Utils.GetResString(this.ResourceID);
-                }
-                return _sidebarLabel;
-            }
-        }
+      get;
     }
+
+    public string SidebarLabel
+    {
+      get
+      {
+        if (null == _sidebarLabel)
+        {
+          _sidebarLabel = Utils.Utils.GetResString(this.ResourceID);
+        }
+        return _sidebarLabel;
+      }
+    }
+  }
 }

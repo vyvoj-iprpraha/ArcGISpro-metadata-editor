@@ -1858,10 +1858,15 @@
 					<xsl:value-of select="."/>
 				</IPRcode>
 			</xsl:for-each>
-			<xsl:for-each select="UAPstatus[. != '']">
+			<xsl:for-each select="UAPstatus2024[. != '']">
 				<UAPcode>
 					<xsl:value-of select="."/>
 				</UAPcode>
+			</xsl:for-each>
+			<xsl:for-each select="UAPstatus[. != '']">
+				<UAPcode2020>
+					<xsl:value-of select="."/>
+				</UAPcode2020>
 			</xsl:for-each>
 			<xsl:for-each select="GEMETstatus[. != '']">
 				<GEMETcode>

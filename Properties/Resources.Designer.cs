@@ -6885,11 +6885,20 @@ namespace IPRMetadata.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Jev ÚAP             .
+        ///   Looks up a localized string similar to Jev ÚAP 2020             .
         /// </summary>
-        public static string THEME_UAP {
+        public static string THEME_UAP_2020 {
             get {
-                return ResourceManager.GetString("THEME_UAP", resourceCulture);
+                return ResourceManager.GetString("THEME_UAP_2020", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Jev ÚAP.
+        /// </summary>
+        public static string THEME_UAP_2024 {
+            get {
+                return ResourceManager.GetString("THEME_UAP_2024", resourceCulture);
             }
         }
         

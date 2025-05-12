@@ -11,50 +11,51 @@ See the License for the specific language governing permissions and
 limitations under the License.​
 */
 
-using ArcGIS.Desktop.Metadata.Editor.Pages;
 using System.Collections.Generic;
 using System.Windows.Controls;
 using System.Xml;
 
+using ArcGIS.Desktop.Metadata.Editor.Pages;
+
 namespace IPRMetadata.Pages
 {
-    /// <summary>
-    /// Interaction logic for MTK_DQ_Element.xaml
-    /// </summary>
-    internal partial class MTK_DQ_Element : EditorPage
+  /// <summary>
+  /// Interaction logic for MTK_DQ_Element.xaml
+  /// </summary>
+  internal partial class MTK_DQ_Element : EditorPage
+  {
+    public MTK_DQ_Element()
     {
-        public MTK_DQ_Element()
-        {
-            InitializeComponent();
-        }
-
-        public override string DefaultValue
-        {
-            get
-            {
-                IEnumerable<XmlNode> data = GetXmlDataContext();
-                if (null == data)
-                    return null;
-
-                foreach (XmlNode root in data)
-                {
-                    // MEASURE NAME
-                    XmlNode node = root.SelectSingleNode("*/measName");
-                    if (null != node && 0 < node.InnerText.Length)
-                    {
-                        return node.InnerText;
-                    }
-
-                    break;
-                }
-
-                return null;
-            }
-            set
-            {
-                // DO NOTHING
-            }
-
-        }
+      InitializeComponent();
     }
+
+    public override string DefaultValue
+    {
+      get
+      {
+        IEnumerable<XmlNode> data = GetXmlDataContext();
+        if (null == data)
+          return null;
+
+        foreach (XmlNode root in data)
+        {
+          // MEASURE NAME
+          XmlNode node = root.SelectSingleNode("*/measName");
+          if (null != node && 0 < node.InnerText.Length)
+          {
+            return node.InnerText;
+          }
+
+          break;
+        }
+
+        return null;
+      }
+      set
+      {
+        // DO NOTHING
+      }
+
+    }
+  }
 }

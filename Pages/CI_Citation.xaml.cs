@@ -11,7 +11,6 @@ See the License for the specific language governing permissions and
 limitations under the License.​
 */
 
-using ArcGIS.Desktop.Metadata.Editor.Pages;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -20,47 +19,51 @@ using System.Windows;
 using System.Windows.Controls;
 using System.Xml;
 
+using ArcGIS.Desktop.Framework;
+using ArcGIS.Desktop.Metadata;
+using ArcGIS.Desktop.Metadata.Editor.Pages;
+
 namespace IPRMetadata.Pages
 {
-    /// <summary>
-    /// Interaction logic for MTK_CI_Citation.xaml
-    /// </summary>
-    internal partial class MTK_CI_Citation : EditorPage, INotifyPropertyChanged
+  /// <summary>
+  /// Interaction logic for MTK_CI_Citation.xaml
+  /// </summary>
+  internal partial class MTK_CI_Citation : EditorPage, INotifyPropertyChanged
+  {
+    private Dictionary<string, string> _titles;
+    public Dictionary<string, string> Titles
     {
-        private Dictionary<string, string> _titles;
-        public Dictionary<string, string> Titles
-        {
-            get { return _titles; }
-            set
-            {
-                _titles = value;
-                NotifyPropertyChanged(nameof(Titles));
-            }
-        }
+      get { return _titles; }
+      set
+      {
+        _titles = value;
+        NotifyPropertyChanged(nameof(Titles));
+      }
+    }
 
 
-        private bool _otherSelected;
-        public bool OtherSelected
-        {
-            get { return _otherSelected; }
-            set
-            {
-                _otherSelected = value;
-                NotifyPropertyChanged(nameof(OtherSelected));
-            }
-        }
+    private bool _otherSelected;
+    public bool OtherSelected
+    {
+      get { return _otherSelected; }
+      set
+      {
+        _otherSelected = value;
+        NotifyPropertyChanged(nameof(OtherSelected));
+      }
+    }
 
-        public new event PropertyChangedEventHandler PropertyChanged;
-        private void NotifyPropertyChanged(string info)
-        {
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(info));
-        }
+    public new event PropertyChangedEventHandler PropertyChanged;
+    private void NotifyPropertyChanged(string info)
+    {
+      PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(info));
+    }
 
-        public MTK_CI_Citation()
-        {
-            InitializeComponent();
+    public MTK_CI_Citation()
+    {
+      InitializeComponent();
 
-            Titles = new Dictionary<string, string>
+      Titles = new Dictionary<string, string>
             {
                 { "Bulgarian  (BG): РЕГЛАМЕНТ (ЕС) № 1089/2010  НА КОМИСИЯТА", "РЕГЛАМЕНТ (ЕС) № 1089/2010 НА КОМИСИЯТА от 23 ноември 2010 година за прилагане на Директива 2007/2/ЕО на Европейския парламент и на Съвета по отношение на оперативната съвместимост на масиви от пространствени данни и услуги за пространствени данни" },
                 { "Czech (CS): NAŘÍZENÍ KOMISE (EU) č. 1089/2010", "NAŘÍZENÍ KOMISE (EU) č. 1089/2010 ze dne 23. listopadu 2010, kterým se provádí směrnice Evropského parlamentu a Rady 2007/2/ES, pokud jde o interoperabilitu sad prostorových dat a služeb prostorových dat" },
@@ -88,134 +91,142 @@ namespace IPRMetadata.Pages
                 { "Other", "Other" }
             }.OrderBy(pair => pair.Key).ToDictionary(pair => pair.Key, pair => pair.Value);
 
-            Loaded += CI_Citation_Loaded;
-        }
-
-        public static readonly DependencyProperty SupressPartiesProperty = DependencyProperty.Register(
-           "SupressParties",
-           typeof(Boolean),
-           typeof(MTK_CI_Citation));
-
-        public static readonly DependencyProperty SupressOnlineResourceProperty = DependencyProperty.Register(
-           "SupressOnlineResource",
-           typeof(Boolean),
-           typeof(MTK_CI_Citation));
-
-        public static readonly DependencyProperty DefaultTitleProperty = DependencyProperty.Register(
-           "DefaultTitle",
-           typeof(string),
-           typeof(MTK_CI_Citation));
-
-        public static readonly DependencyProperty DefaultLinkageProperty = DependencyProperty.Register(
-           "DefaultLinkage",
-           typeof(string),
-           typeof(MTK_CI_Citation));
-
-        public static readonly DependencyProperty UseDropdownProperty = DependencyProperty.Register(
-           "UseDropdown",
-           typeof(bool),
-           typeof(MTK_CI_Citation));
-
-        public Boolean SupressParties
-        {
-            get { return (Boolean)this.GetValue(SupressPartiesProperty); }
-            set { this.SetValue(SupressPartiesProperty, value); }
-        }
-
-        public Boolean SupressOnlineResource
-        {
-            get { return (Boolean)this.GetValue(SupressOnlineResourceProperty); }
-            set { this.SetValue(SupressOnlineResourceProperty, value); }
-        }
-
-        public string DefaultTitle
-        {
-            get { return (string)this.GetValue(DefaultTitleProperty); }
-            set { this.SetValue(DefaultTitleProperty, value); }
-        }
-
-        public string DefaultLinkage
-        {
-            get { return (string)this.GetValue(DefaultLinkageProperty); }
-            set { this.SetValue(DefaultLinkageProperty, value); }
-        }
-
-        public bool UseDropdown
-        {
-            get { return (bool)this.GetValue(UseDropdownProperty); }
-            set { this.SetValue(UseDropdownProperty, value); }
-        }
-
-        private void CI_Citation_Loaded(object sender, RoutedEventArgs e)
-        {
-            SetDefaults();
-        }
-
-        private void SetDefaults()
-        {
-            var titleNode = GetTitleNode();
-            if (titleNode != null && !string.IsNullOrWhiteSpace(DefaultTitle) && string.IsNullOrWhiteSpace(titleNode.InnerText))
-            {
-                titleNode.InnerText = DefaultTitle;
-            }
-
-            UseDropdown = false;
-        }
-
-        private void CI_Citation_title_combobox_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-            if (!UseDropdown)
-            {
-                return;
-            }
-
-            var cb = (ComboBox)sender;
-            var selectedVal = (string)cb.SelectedValue;
-            OtherSelected = selectedVal == "Other";
-            if (!OtherSelected)
-            {
-                var titleNode = GetTitleNode();
-                if (titleNode != null)
-                {
-                    titleNode.InnerText = selectedVal;
-                }
-            }
-        }
-
-        private void CI_Citation_title_combobox_Loaded(object sender, RoutedEventArgs e)
-        {
-            if (!UseDropdown)
-            {
-                return;
-            }
-
-            var titleNode = GetTitleNode();
-            if (titleNode != null)
-            {
-                var cb = (ComboBox)sender;
-                var dict = (Dictionary<string, string>)cb.ItemsSource;
-                if (dict.ContainsValue(titleNode.InnerText))
-                {
-                    cb.SelectedValue = titleNode.InnerText;
-                }
-                else
-                {
-                    cb.SelectedValue = "Other";
-                }
-            }
-        }
-
-        private XmlNode GetTitleNode()
-        {
-            object context = Utils.Utils.GetDataContext(this);
-            IEnumerable<XmlNode> nodes = Utils.Utils.GetXmlDataContext(context);
-            if (null != nodes)
-            {
-                var node = nodes.First();
-                return node.SelectSingleNode("resTitle");
-            }
-
-            return null;
-        }
+      Loaded += CI_Citation_Loaded;
     }
+
+    public static readonly DependencyProperty SupressPartiesProperty = DependencyProperty.Register(
+       "SupressParties",
+       typeof(Boolean),
+       typeof(MTK_CI_Citation));
+
+    public static readonly DependencyProperty SupressOnlineResourceProperty = DependencyProperty.Register(
+       "SupressOnlineResource",
+       typeof(Boolean),
+       typeof(MTK_CI_Citation));
+
+    public static readonly DependencyProperty DefaultTitleProperty = DependencyProperty.Register(
+       "DefaultTitle",
+       typeof(string),
+       typeof(MTK_CI_Citation));
+
+    public static readonly DependencyProperty DefaultLinkageProperty = DependencyProperty.Register(
+       "DefaultLinkage",
+       typeof(string),
+       typeof(MTK_CI_Citation));
+
+    public static readonly DependencyProperty UseDropdownProperty = DependencyProperty.Register(
+       "UseDropdown",
+       typeof(bool),
+       typeof(MTK_CI_Citation));
+
+    public Boolean SupressParties
+    {
+      get { return (Boolean)this.GetValue(SupressPartiesProperty); }
+      set { this.SetValue(SupressPartiesProperty, value); }
+    }
+
+    public Boolean SupressOnlineResource
+    {
+      get { return (Boolean)this.GetValue(SupressOnlineResourceProperty); }
+      set { this.SetValue(SupressOnlineResourceProperty, value); }
+    }
+
+    public string DefaultTitle
+    {
+      get { return (string)this.GetValue(DefaultTitleProperty); }
+      set { this.SetValue(DefaultTitleProperty, value); }
+    }
+
+    public string DefaultLinkage
+    {
+      get { return (string)this.GetValue(DefaultLinkageProperty); }
+      set { this.SetValue(DefaultLinkageProperty, value); }
+    }
+
+    public bool UseDropdown
+    {
+      get { return (bool)this.GetValue(UseDropdownProperty); }
+      set { this.SetValue(UseDropdownProperty, value); }
+    }
+
+    private void CI_Citation_Loaded(object sender, RoutedEventArgs e)
+    {
+      SetDefaults();
+    }
+
+    private bool _bINSPIRE = false;
+    private void SetDefaults()
+    {
+      var titleNode = GetTitleNode();
+      if (titleNode != null && !string.IsNullOrWhiteSpace(DefaultTitle) && string.IsNullOrWhiteSpace(titleNode.InnerText))
+      {
+        titleNode.InnerText = DefaultTitle;
+      }
+
+      string profile = null;
+      var mdModule = FrameworkApplication.FindModule("esri_metadata_module") as IMetadataEditorHost;
+      if (mdModule != null)
+        profile = mdModule.GetCurrentProfile(this);
+
+      if (profile != null)
+      {
+        _bINSPIRE = profile.Equals("INSPIRE", System.StringComparison.InvariantCultureIgnoreCase);
+        if (!_bINSPIRE)
+            UseDropdown = false;
+      }
+    }
+
+    private void CI_Citation_title_combobox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+    {
+      if (!UseDropdown)
+        return;
+
+      var cb = (ComboBox)sender;
+      var selectedVal = (string)cb.SelectedValue;
+      OtherSelected = selectedVal == "Other";
+
+      if (!OtherSelected)
+      {
+        var titleNode = GetTitleNode();
+        if (titleNode != null)
+        {
+          titleNode.InnerText = selectedVal;
+        }
+      }
+    }
+
+    private void CI_Citation_title_combobox_Loaded(object sender, RoutedEventArgs e)
+    {
+      if (!UseDropdown || !_bINSPIRE)
+        return;
+
+      var titleNode = GetTitleNode();
+      if (titleNode != null)
+      {
+        var cb = (ComboBox)sender;
+        var dict = (Dictionary<string, string>)cb.ItemsSource;
+        if (dict.ContainsValue(titleNode.InnerText))
+        {
+          cb.SelectedValue = titleNode.InnerText;
+        }
+        else
+        {
+          cb.SelectedValue = "Other";
+        }
+      }
+    }
+
+    private XmlNode GetTitleNode()
+    {
+      object context = Utils.Utils.GetDataContext(this);
+      IEnumerable<XmlNode> nodes = Utils.Utils.GetXmlDataContext(context);
+      if (null != nodes)
+      {
+        var node = nodes.First();
+        return node.SelectSingleNode("resTitle");
+      }
+
+      return null;
+    }
+  }
 }

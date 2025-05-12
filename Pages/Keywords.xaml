@@ -78,10 +78,12 @@ limitations under the License.​
                             </tpCatBag>
                             <!-- TODO: other keywords -->
                         </dataIdInfo>
+                        <!--*******************************************************************************-->
                         <custom>
                             <TopicStatus>
                                 <INSPIREstatus>Adresy</INSPIREstatus>
                                 <IPRstatus>Ostatní tematická data</IPRstatus>
+                                <UAPstatus2024>Není jev ÚAP</UAPstatus2024>
                                 <UAPstatus>Není jev ÚAP</UAPstatus>
                                 <GEMETstatus>Bezpečnost/Safety</GEMETstatus>
                                 <IPRkeywordstatus>Archivní mapy/Archival maps</IPRkeywordstatus>
@@ -156,7 +158,7 @@ limitations under the License.​
         </XmlDataProvider>
 
 
-        <!--UAP-->
+        <!--UAP2020-->
         <XmlDataProvider x:Key="ThemeUAP" XPath="/"
                      IsAsynchronous= "False"
                      IsInitialLoadEnabled= "True">
@@ -298,6 +300,133 @@ limitations under the License.​
             </x:XData>
         </XmlDataProvider>
 
+        <!--UAP-->
+        <XmlDataProvider x:Key="ThemeUAP2024" XPath="/"
+             IsAsynchronous= "False"
+             IsInitialLoadEnabled= "True">
+            <x:XData>
+                <ANY xmlns="">
+                    <statuscodes>
+                        <status>Není jev ÚAP</status>
+                        <status>J.001 - Zastavěné území</status>
+                        <status>J.002 - Využití území</status>
+                        <status>J.003 - Brownfield</status>
+                        <status>J.004 - Nemovitá národní kulturní památka, nemovitá kulturní památka a jejich ochranné pásmo</status>
+                        <status>J.005 - Památkově chráněné území a jeho ochranné pásmo</status>
+                        <status>J.006 - Území s archeologickými nálezy</status>
+                        <status>J.007 - Statek zapsaný na Seznamu světového dědictví a jeho nárazníková zóna</status>
+                        <status>J.008 - Struktura a výška zástavby, významná dominanta</status>
+                        <status>J.009 - Architektonicky nebo urbanisticky cenná stavba nebo soubor staveb, historicky významná stavba, místo nebo soubor staveb</status>
+                        <status>J.010 - Urbanistická a krajinná hodnota, znak historické kulturní krajiny</status>
+                        <status>J.011 - Památný strom a jeho ochranné pásmo</status>
+                        <status>J.012 - Územní systém ekologické stability</status>
+                        <status>J.013 - Významný krajinný prvek</status>
+                        <status>J.014 - Přechodně chráněná plocha</status>
+                        <status>J.015 - Zvláště chráněné území, zóny ochrany přírody národního parku, zóny odstupňované ochrany přírody chráněné krajinné oblasti, klidová území národního parku, ochranné pásmo zvláště chráněného území</status>
+                        <status>J.016 - Evropsky významná lokalita, ptačí oblast</status>
+                        <status>J.017 - Biosférická rezervace UNESCO, geopark UNESCO, národní geopark</status>
+                        <status>J.018 - Smluvně chráněné území</status>
+                        <status>J.019 - Mokřad podle Ramsarské úmluvy</status>
+                        <status>J.020 - Biotop vybraných zvláště chráněných druhů rostlin a živočichů</status>
+                        <status>J.021 - Biotop vybraných zvláště chráněných druhů velkých savců</status>
+                        <status>J.022 - Přírodní park</status>
+                        <status>J.023 - Krajinný ráz</status>
+                        <status>J.024 - Krajina a krajinný okrsek</status>
+                        <status>J.025 - Les, jeho kategorizace a vzdálenost 30 m od okraje lesa</status>
+                        <status>J.026 - Bonitovaná půdně ekologická jednotka a třída ochrany zemědělského půdního fondu</status>
+                        <status>J.027 - Plocha vodní a větrné eroze</status>
+                        <status>J.028 - Investice do půdy za účelem zlepšení půdní úrodnosti</status>
+                        <status>J.029 - Plocha vhodná k zalesnění, plocha vhodná k zatravnění</status>
+                        <status>J.030 - Vodní zdroj pro zásobování pitnou vodou a jeho ochranné pásmo</status>
+                        <status>J.031 - Chráněná oblast přirozené akumulace vod</status>
+                        <status>J.032 - Zranitelná oblast povrchových a podzemních vod</status>
+                        <status>J.033 - Oblast povrchových vod využívaná ke koupání</status>
+                        <status>J.034 - Vodní útvar povrchových a podzemních vod</status>
+                        <status>J.035 - Vodní nádrž</status>
+                        <status>J.036 - Území chráněné pro akumulaci povrchových vod</status>
+                        <status>J.037 - Povodí vodního toku, rozvodnice</status>
+                        <status>J.038 - Záplavové území včetně aktivní zóny</status>
+                        <status>J.039 - Kategorie území podle map povodňového ohrožení</status>
+                        <status>J.040 - Kritický bod a jeho povodí</status>
+                        <status>J.041 - Území ohrožené zvláštními povodněmi</status>
+                        <status>J.042 - Stavba, objekt a zařízení na ochranu před povodněmi a území určené k řízeným rozlivům povodní</status>
+                        <status>J.043 - Přírodní léčivý zdroj, zdroj přírodní minerální vody a jejich ochranné pásmo</status>
+                        <status>J.044 - Lázeňské místo včetně vymezení vnitřního a vnějšího území lázeňského místa</status>
+                        <status>J.045 - Dobývací prostor a prostor pro dobývání ložisek nerostů</status>
+                        <status>J.046 - Chráněné ložiskové území</status>
+                        <status>J.047 - Chráněné území pro zvláštní zásahy do zemské kůry</status>
+                        <status>J.048 - Ložisko nerostných surovin</status>
+                        <status>J.049 - Poddolované území</status>
+                        <status>J.050 - Sesuvné území a území jiných geologických rizik</status>
+                        <status>J.051 - Staré důlní dílo</status>
+                        <status>J.052 - Stará zátěž území a kontaminovaná plocha</status>
+                        <status>J.053 - Uzavřené a opuštěné úložné místo těžebního odpadu</status>
+                        <status>J.054 - Oblast s překročenými imisními limity</status>
+                        <status>J.055 - Stacionární zdroj znečišťování ovzduší</status>
+                        <status>J.056 - Hluková zóna obce</status>
+                        <status>J.057 - Trasa a objekt vodovodní sítě a jejich ochranné pásmo</status>
+                        <status>J.058 - Trasa a objekt stokové sítě a jejich ochranné pásmo</status>
+                        <status>J.059 - Trasa a objekt elektrické sítě a jejich ochranné pásmo</status>
+                        <status>J.060 - Trasa a objekt plynovodní a jejich ochranné pásmo</status>
+                        <status>J.061 - Trasa a objekt produktovodu a jejich ochranné pásmo</status>
+                        <status>J.062 - Trasa a objekt teplovodu a jejich ochranné pásmo</status>
+                        <status>J.063 - Elektronická komunikace, její ochranné pásmo a zájmové území</status>
+                        <status>J.064 - Sdružená liniová síť</status>
+                        <status>J.065 - Jaderné zařízení a jeho ochranné pásmo</status>
+                        <status>J.066 - Objekt a zařízení zařazené do skupiny A nebo B podle zákona o prevenci závažných havárií</status>
+                        <status>J.067 - Dosahy havarijních projevů pro objekty vymezené zákonem o prevenci závažných havárií</status>
+                        <status>J.068 - Zařízení odpadového hospodářství a jeho ochranné pásmo</status>
+                        <status>J.069 - Pozemní komunikace a její ochranné pásmo</status>
+                        <status>J.070 - Terminál a logistické centrum</status>
+                        <status>J.071 - Stavba dráhy, stavba na dráze a jejich ochranné pásmo</status>
+                        <status>J.072 - Letiště, letecká stavba a jejich ochranné pásmo a zájmové území</status>
+                        <status>J.073 - Sledovaná vodní cestaa</status>
+                        <status>J.074 - Přeshraniční propojení</status>
+                        <status>J.075 - Linka a zastávka veřejné hromadné dopravy</status>
+                        <status>J.076 - Cyklostezka, cyklotrasa, hipostezka, turistická stezka, běžkařská trasa, sjezdovka</status>
+                        <status>J.077 - Území vymezené Ministerstvem obrany pro zajišťování obrany státu, objekty důležité pro obranu státu a jejich ochranná pásma</status>
+                        <status>J.078 - Vojenský újezd a jeho zájmové území</status>
+                        <status>J.079 - Vymezená zóna havarijního plánování</status>
+                        <status>J.080 - Objekt civilní a požární ochrany</status>
+                        <status>J.081 - Území vymezené Ministerstvem vnitra pro zajišťování bezpečnosti státu a stavby důležité pro bezpečnost státu</status>
+                        <status>J.082 - Bezpečnostní pásma staveb určených k nakládání s výbušninami</status>
+                        <status>J.083 - Pohřebiště, krematorium, válečný hrob a pietní místo</status>
+                        <status>J.084 - Jiné ochranné pásmo</status>
+                        <status>J.085 - Plán společných zařízení</status>
+                        <status>J.086 - Povolení záměru</status>
+                        <status>J.087 - Záměr, pokud není vyjádřen jinou položkou</status>
+                        <status>J.088 - Vymezení správních územních celků</status>
+                        <status>J.089 - Vývoj počtu obyvatelstva</status>
+                        <status>J.090 - Věkové složení obyvatelstva</status>
+                        <status>J.091 - Vzdělanostní složení obyvatelstva</status>
+                        <status>J.092 - Sídelní struktura</status>
+                        <status>J.093 - Ekonomická aktivita podle odvětví</status>
+                        <status>J.094 - Daňové příjmy rozpočtů obcí a krajů</status>
+                        <status>J.095 - Hrubý domácí produkt</status>
+                        <status>J.096 - Nezaměstnanost</status>
+                        <status>J.097 - Index sociálního vyloučení</status>
+                        <status>J.098 - Vyjížďka a dojížďka</status>
+                        <status>J.099 - Výstavba domů a bytů</status>
+                        <status>J.100 - Obydlenost bytového fondu</status>
+                        <status>J.101 - Stáří a struktura bytového a domovního fondu</status>
+                        <status>J.102 - Rekreační a turistické oblasti</status>
+                        <status>J.103 - Kapacita a kategorie ubytovacích zařízení</status>
+                        <status>J.104 - Podíl obyvatel napojených na veřejnou technickou infrastrukturu</status>
+                        <status>J.105 - Podíl zemědělské půdy z celkové výměry územního celku</status>
+                        <status>J.106 - Podíl druhů pozemků z celkové výměry zemědělské půdy</status>
+                        <status>J.107 - Podíl tříd ochrany zemědělské půdy z celkové výměry územního celku</status>
+                        <status>J.108 - Podíl jednotlivých druhů pozemků z celkové výměry územního celku</status>
+                        <status>J.109 - Hranice přírodních lesních oblastí</status>
+                        <status>J.110 - Hranice bioregionů a biochor</status>
+                        <status>J.111 - Hranice klimatických regionů</status>
+                        <status>J.112 - Regionalizace území podle míry ohrožení suchem</status>
+                        <status>J.113 - Další dostupné informace o území</status>
+                    </statuscodes>
+                </ANY>
+            </x:XData>
+        </XmlDataProvider>
+
+
         <!--GEMET klíčové slovo-->
         <XmlDataProvider x:Key="ThemeGEMET" XPath="/"
                      IsAsynchronous= "False"
@@ -394,7 +523,7 @@ limitations under the License.​
                 </ANY>
             </x:XData>
         </XmlDataProvider>
-
+        <!--*******************************************************************************-->
         <XmlDataProvider x:Key="XmlRecord_OtherKey" XPath="/" IsAsynchronous="False" IsInitialLoadEnabled="True">
             <x:XData>
                 <ANY xmlns="">
@@ -642,7 +771,40 @@ limitations under the License.​
                                 </StackPanel>
                             </Border>
 
-                            <!-- Theme UAP -->
+                            <!-- Theme UAP 2024 -->
+                            <Border Style="{DynamicResource EditorBorder2Style}">
+                                <StackPanel>
+                                    <ListBox Style="{DynamicResource EditorNoScrollListBoxStyle}" ItemsSource="{Binding XPath=/metadata/custom/TopicStatus}">
+                                        <ListBox.ItemTemplate>
+                                            <DataTemplate>
+                                                <StackPanel>
+                                                    <DockPanel LastChildFill="True"
+                                   HorizontalAlignment="Stretch">
+                                                        <Label DockPanel.Dock="Left"
+                                   Style="{DynamicResource EditorHLabelNoIdentStyle}"
+                                   Content="{x:Static r:Resources.THEME_UAP_2024}"/>
+
+                                                        <ComboBox Loaded="PostProcessComboBoxValues" 
+                                      SelectionChanged="ComboBoxSyncSelectionChanged" 
+                                      Style="{DynamicResource EditorHComboBoxStyle}" 
+                                      IsEditable="False" 
+                                      ItemsSource="{Binding Source={StaticResource ThemeUAP2024}, XPath=//status}" 
+                                      DisplayMemberPath="." 
+                                      SelectedValuePath=".">
+
+                                                            <ComboBox.SelectedValue>
+                                                                <Binding XPath="UAPstatus2024" Mode="TwoWay"/>
+                                                            </ComboBox.SelectedValue>
+                                                        </ComboBox>
+                                                    </DockPanel>
+                                                </StackPanel>
+                                            </DataTemplate>
+                                        </ListBox.ItemTemplate>
+                                    </ListBox>
+                                </StackPanel>
+                            </Border>
+
+                            <!-- Theme UAP 2020 -->
                             <Border Style="{DynamicResource EditorBorder2Style}">
                                 <StackPanel>
                                     <ListBox Style="{DynamicResource EditorNoScrollListBoxStyle}" ItemsSource="{Binding XPath=/metadata/custom/TopicStatus}">
@@ -653,7 +815,7 @@ limitations under the License.​
                                                                HorizontalAlignment="Stretch">
                                                         <Label DockPanel.Dock="Left"
                                                                Style="{DynamicResource EditorHLabelNoIdentStyle}"
-                                                               Content="{x:Static r:Resources.THEME_UAP}"/>     
+                                                               Content="{x:Static r:Resources.THEME_UAP_2020}"/>
 
                                                         <ComboBox Loaded="PostProcessComboBoxValues" 
                                                                   SelectionChanged="ComboBoxSyncSelectionChanged" 
@@ -779,7 +941,7 @@ limitations under the License.​
                               Mode=OneWayToSource}" LastChildFill="True">
                                                             <Button DockPanel.Dock="Right" Click="DeleteItem" Style="{DynamicResource DeleteButton}"
                                       Name="TopicsAndKeywordsPage_ThemeKeywordDelete">
-                                                                <Image Style="{DynamicResource DeleteImageStyle}" Source="pack://application:,,,/ArcGIS.Desktop.Resources;component/Images/GenericDeleteRed16.png"/>
+                                <Image Style="{DynamicResource DeleteImageStyle}" Source="{DynamicResource GenericDeleteRed16}"/>
                                                             </Button>
                                                             <Label Style="{DynamicResource EditorHExpanderLabel}"  Content="{x:Static r:Resources.LBL_DESC_THEMEKEY}"/>
                                                         </DockPanel>
@@ -797,7 +959,7 @@ limitations under the License.​
                                     <Button Tag="ThemeKey" Click="AddRecordByTagToLocal" Style="{DynamicResource AddButton}"
                           Name="TopicsAndKeywordsPage_ThemeKeywordAdd">
                                         <StackPanel VerticalAlignment="Center" Orientation="Horizontal">
-                                            <Image Style="{DynamicResource AddImageStyle}" Source="pack://application:,,,/ArcGIS.Desktop.Resources;component/Images/GenericAddGreen16.png"/>
+                      <Image Style="{DynamicResource AddImageStyle}" Source="{DynamicResource GenericAddGreen16}"/>
                                             <TextBlock Style="{DynamicResource ButtonTextStyle}" Text="{x:Static r:Resources.BTN_KEY_NEW_THEME}"/>
                                         </StackPanel>
                                     </Button>
@@ -936,328 +1098,328 @@ limitations under the License.​
                                 </StackPanel>
                             </Border>
                             <!--**************************************************************************************************************************************************-->
-                            <!-- place keywords -->
-                            <Border Style="{DynamicResource EditorBorder2Style}">
-                                <StackPanel>
-                                    <ListBox Style="{DynamicResource EditorNoScrollListBoxStyle}" ItemsSource="{Binding XPath=placeKeys}">
-                                        <ListBox.ItemsPanel>
-                                            <ItemsPanelTemplate>
-                                                <StackPanel/>
-                                            </ItemsPanelTemplate>
-                                        </ListBox.ItemsPanel>
-                                        <ListBox.ItemTemplate>
-                                            <DataTemplate>
-                                                <Expander Style="{DynamicResource EditorExpander2Style}" 
+              <!-- place keywords -->
+              <Border Style="{DynamicResource EditorBorder2Style}">
+                <StackPanel>
+                  <ListBox Style="{DynamicResource EditorNoScrollListBoxStyle}" ItemsSource="{Binding XPath=placeKeys}">
+                    <ListBox.ItemsPanel>
+                      <ItemsPanelTemplate>
+                        <StackPanel/>
+                      </ItemsPanelTemplate>
+                    </ListBox.ItemsPanel>
+                    <ListBox.ItemTemplate>
+                      <DataTemplate>
+                        <Expander Style="{DynamicResource EditorExpander2Style}" 
                                   AutomationProperties.AutomationId="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type ListBoxItem}}, Converter={StaticResource _lbiToAutoIdConverter}, ConverterParameter=TopicsAndKeywordsPage_PlaceKeywordGroup}">
-                                                    <Expander.Header>
-                                                        <DockPanel HorizontalAlignment="{Binding HorizontalAlignment,
+                          <Expander.Header>
+                            <DockPanel HorizontalAlignment="{Binding HorizontalAlignment,
                               RelativeSource={RelativeSource FindAncestor,
                               AncestorType={x:Type ContentPresenter}},
                               Mode=OneWayToSource}" LastChildFill="True">
-                                                            <Button DockPanel.Dock="Right" Click="DeleteItem" Style="{DynamicResource DeleteButton}"
+                              <Button DockPanel.Dock="Right" Click="DeleteItem" Style="{DynamicResource DeleteButton}"
                                       Name="TopicsAndKeywordsPage_PlaceKeywordDelete">
-                                                                <Image Style="{DynamicResource DeleteImageStyle}" Source="pack://application:,,,/ArcGIS.Desktop.Resources;component/Images/GenericDeleteRed16.png"/>
-                                                            </Button>
-                                                            <Label Style="{DynamicResource EditorHExpanderLabel}"  Content="{x:Static r:Resources.LBL_DESC_PLACEKEY}"/>
-                                                        </DockPanel>
-                                                    </Expander.Header>
-                                                    <StackPanel>
-                                                        <tp:MTK_MD_Keywords ToolTip="{x:Static r:Definitions.MD_Keywords_place}"/>
-                                                        <Border Style="{DynamicResource EditorBorderHRuleStyle}" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" >
-                                                        </Border>
-                                                    </StackPanel>
-                                                </Expander>
-                                            </DataTemplate>
-                                        </ListBox.ItemTemplate>
-                                    </ListBox>
-                                    <!-- ADD place keywords -->
-                                    <Button Tag="PlaceKey" Click="AddRecordByTagToLocal" Style="{DynamicResource AddButton}"
+                                <Image Style="{DynamicResource DeleteImageStyle}" Source="{DynamicResource GenericDeleteRed16}"/>
+                              </Button>
+                              <Label Style="{DynamicResource EditorHExpanderLabel}"  Content="{x:Static r:Resources.LBL_DESC_PLACEKEY}"/>
+                            </DockPanel>
+                          </Expander.Header>
+                          <StackPanel>
+                            <tp:MTK_MD_Keywords ToolTip="{x:Static r:Definitions.MD_Keywords_place}"/>
+                            <Border Style="{DynamicResource EditorBorderHRuleStyle}" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" >
+                            </Border>
+                          </StackPanel>
+                        </Expander>
+                      </DataTemplate>
+                    </ListBox.ItemTemplate>
+                  </ListBox>
+                  <!-- ADD place keywords -->
+                  <Button Tag="PlaceKey" Click="AddRecordByTagToLocal" Style="{DynamicResource AddButton}"
                           Name="TopicsAndKeywordsPage_PlaceKeywordAdd">
-                                        <StackPanel VerticalAlignment="Center" Orientation="Horizontal">
-                                            <Image Style="{DynamicResource AddImageStyle}" Source="pack://application:,,,/ArcGIS.Desktop.Resources;component/Images/GenericAddGreen16.png"/>
-                                            <TextBlock Style="{DynamicResource ButtonTextStyle}" Text="{x:Static r:Resources.BTN_KEY_NEW_PLACE}"/>
-                                        </StackPanel>
-                                    </Button>
-                                </StackPanel>
-                            </Border>
+                    <StackPanel VerticalAlignment="Center" Orientation="Horizontal">
+                      <Image Style="{DynamicResource AddImageStyle}" Source="{DynamicResource GenericAddGreen16}"/>
+                      <TextBlock Style="{DynamicResource ButtonTextStyle}" Text="{x:Static r:Resources.BTN_KEY_NEW_PLACE}"/>
+                    </StackPanel>
+                  </Button>
+                </StackPanel>
+              </Border>
 
-                            <!-- temporal keywords -->
-                            <Border Style="{DynamicResource EditorBorder2Style}">
-                                <StackPanel>
-                                    <ListBox Style="{DynamicResource EditorNoScrollListBoxStyle}" ItemsSource="{Binding XPath=tempKeys}">
-                                        <ListBox.ItemsPanel>
-                                            <ItemsPanelTemplate>
-                                                <StackPanel/>
-                                            </ItemsPanelTemplate>
-                                        </ListBox.ItemsPanel>
-                                        <ListBox.ItemTemplate>
-                                            <DataTemplate>
-                                                <Expander Style="{DynamicResource EditorExpander2Style}" 
+              <!-- temporal keywords -->
+              <Border Style="{DynamicResource EditorBorder2Style}">
+                <StackPanel>
+                  <ListBox Style="{DynamicResource EditorNoScrollListBoxStyle}" ItemsSource="{Binding XPath=tempKeys}">
+                    <ListBox.ItemsPanel>
+                      <ItemsPanelTemplate>
+                        <StackPanel/>
+                      </ItemsPanelTemplate>
+                    </ListBox.ItemsPanel>
+                    <ListBox.ItemTemplate>
+                      <DataTemplate>
+                        <Expander Style="{DynamicResource EditorExpander2Style}" 
                                   AutomationProperties.AutomationId="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type ListBoxItem}}, Converter={StaticResource _lbiToAutoIdConverter}, ConverterParameter=TopicsAndKeywordsPage_TemporalKeywordGroup}">
-                                                    <Expander.Header>
-                                                        <DockPanel HorizontalAlignment="{Binding HorizontalAlignment,
+                          <Expander.Header>
+                            <DockPanel HorizontalAlignment="{Binding HorizontalAlignment,
                               RelativeSource={RelativeSource FindAncestor,
                               AncestorType={x:Type ContentPresenter}},
                               Mode=OneWayToSource}" LastChildFill="True">
-                                                            <Button DockPanel.Dock="Right" Click="DeleteItem" Style="{DynamicResource DeleteButton}"
+                              <Button DockPanel.Dock="Right" Click="DeleteItem" Style="{DynamicResource DeleteButton}"
                                       Name="TopicsAndKeywordsPage_TemporalKeywordDelete">
-                                                                <Image Style="{DynamicResource DeleteImageStyle}" Source="pack://application:,,,/ArcGIS.Desktop.Resources;component/Images/GenericDeleteRed16.png"/>
-                                                            </Button>
-                                                            <Label Style="{DynamicResource EditorHExpanderLabel}"  Content="{x:Static r:Resources.LBL_DESC_TEMPKEY}"/>
-                                                        </DockPanel>
-                                                    </Expander.Header>
-                                                    <StackPanel>
-                                                        <tp:MTK_MD_Keywords ToolTip="{x:Static r:Definitions.MD_Keywords_temporal}"/>
-                                                        <Border Style="{DynamicResource EditorBorderHRuleStyle}" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" >
-                                                        </Border>
-                                                    </StackPanel>
-                                                </Expander>
-                                            </DataTemplate>
-                                        </ListBox.ItemTemplate>
-                                    </ListBox>
-                                    <!-- ADD temporal keywords -->
-                                    <Button Tag="TempKey" Click="AddRecordByTagToLocal" Style="{DynamicResource AddButton}"
+                                <Image Style="{DynamicResource DeleteImageStyle}" Source="{DynamicResource GenericDeleteRed16}"/>
+                              </Button>
+                              <Label Style="{DynamicResource EditorHExpanderLabel}"  Content="{x:Static r:Resources.LBL_DESC_TEMPKEY}"/>
+                            </DockPanel>
+                          </Expander.Header>
+                          <StackPanel>
+                            <tp:MTK_MD_Keywords ToolTip="{x:Static r:Definitions.MD_Keywords_temporal}"/>
+                            <Border Style="{DynamicResource EditorBorderHRuleStyle}" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" >
+                            </Border>
+                          </StackPanel>
+                        </Expander>
+                      </DataTemplate>
+                    </ListBox.ItemTemplate>
+                  </ListBox>
+                  <!-- ADD temporal keywords -->
+                  <Button Tag="TempKey" Click="AddRecordByTagToLocal" Style="{DynamicResource AddButton}"
                           Name="TopicsAndKeywordsPage_TemporalKeywordAdd">
-                                        <StackPanel VerticalAlignment="Center" Orientation="Horizontal">
-                                            <Image Style="{DynamicResource AddImageStyle}" Source="pack://application:,,,/ArcGIS.Desktop.Resources;component/Images/GenericAddGreen16.png"/>
-                                            <TextBlock Style="{DynamicResource ButtonTextStyle}" Text="{x:Static r:Resources.BTN_KEY_NEW_TEMP}"/>
-                                        </StackPanel>
-                                    </Button>
-                                </StackPanel>
-                            </Border>
+                    <StackPanel VerticalAlignment="Center" Orientation="Horizontal">
+                      <Image Style="{DynamicResource AddImageStyle}" Source="{DynamicResource GenericAddGreen16}"/>
+                      <TextBlock Style="{DynamicResource ButtonTextStyle}" Text="{x:Static r:Resources.BTN_KEY_NEW_TEMP}"/>
+                    </StackPanel>
+                  </Button>
+                </StackPanel>
+              </Border>
 
-                            <!-- discipline keywords -->
-                            <Border Style="{DynamicResource EditorBorder2Style}" tu:MetadataStyle.OnlyProfiles="ISO19139,NAP,INSPIRE,ISO19115_3">
-                                <StackPanel>
-                                    <ListBox Style="{DynamicResource EditorNoScrollListBoxStyle}" ItemsSource="{Binding XPath=discKeys}">
-                                        <ListBox.ItemsPanel>
-                                            <ItemsPanelTemplate>
-                                                <StackPanel/>
-                                            </ItemsPanelTemplate>
-                                        </ListBox.ItemsPanel>
-                                        <ListBox.ItemTemplate>
-                                            <DataTemplate>
-                                                <Expander Style="{DynamicResource EditorExpander2Style}" 
+              <!-- discipline keywords -->
+              <Border Style="{DynamicResource EditorBorder2Style}" tu:MetadataStyle.OnlyProfiles="ISO19139,NAP,INSPIRE,ISO19115_3">
+                <StackPanel>
+                  <ListBox Style="{DynamicResource EditorNoScrollListBoxStyle}" ItemsSource="{Binding XPath=discKeys}">
+                    <ListBox.ItemsPanel>
+                      <ItemsPanelTemplate>
+                        <StackPanel/>
+                      </ItemsPanelTemplate>
+                    </ListBox.ItemsPanel>
+                    <ListBox.ItemTemplate>
+                      <DataTemplate>
+                        <Expander Style="{DynamicResource EditorExpander2Style}" 
                                   AutomationProperties.AutomationId="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type ListBoxItem}}, Converter={StaticResource _lbiToAutoIdConverter}, ConverterParameter=TopicsAndKeywordsPage_DisciplineKeywordGroup}">
-                                                    <Expander.Header>
-                                                        <DockPanel HorizontalAlignment="{Binding HorizontalAlignment,
+                          <Expander.Header>
+                            <DockPanel HorizontalAlignment="{Binding HorizontalAlignment,
                               RelativeSource={RelativeSource FindAncestor,
                               AncestorType={x:Type ContentPresenter}},
                               Mode=OneWayToSource}" LastChildFill="True">
-                                                            <Button DockPanel.Dock="Right" Click="DeleteItem" Style="{DynamicResource DeleteButton}"
+                              <Button DockPanel.Dock="Right" Click="DeleteItem" Style="{DynamicResource DeleteButton}"
                                       Name="TopicsAndKeywordsPage_DisciplineKeywordDelete">
-                                                                <Image Style="{DynamicResource DeleteImageStyle}" Source="pack://application:,,,/ArcGIS.Desktop.Resources;component/Images/GenericDeleteRed16.png"/>
-                                                            </Button>
-                                                            <Label Style="{DynamicResource EditorHExpanderLabel}"  Content="{x:Static r:Resources.LBL_DESC_DISKEY}"/>
-                                                        </DockPanel>
-                                                    </Expander.Header>
-                                                    <StackPanel>
-                                                        <tp:MTK_MD_Keywords ToolTip="{x:Static r:Definitions.MD_Keywords_discipline}"/>
-                                                        <Border Style="{DynamicResource EditorBorderHRuleStyle}" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" >
-                                                        </Border>
-                                                    </StackPanel>
-                                                </Expander>
-                                            </DataTemplate>
-                                        </ListBox.ItemTemplate>
-                                    </ListBox>
-                                    <!-- ADD discipline keywords -->
-                                    <Button Tag="DisKey" Click="AddRecordByTagToLocal" Style="{DynamicResource AddButton}"
+                                <Image Style="{DynamicResource DeleteImageStyle}" Source="{DynamicResource GenericDeleteRed16}"/>
+                              </Button>
+                              <Label Style="{DynamicResource EditorHExpanderLabel}"  Content="{x:Static r:Resources.LBL_DESC_DISKEY}"/>
+                            </DockPanel>
+                          </Expander.Header>
+                          <StackPanel>
+                            <tp:MTK_MD_Keywords ToolTip="{x:Static r:Definitions.MD_Keywords_discipline}"/>
+                            <Border Style="{DynamicResource EditorBorderHRuleStyle}" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" >
+                            </Border>
+                          </StackPanel>
+                        </Expander>
+                      </DataTemplate>
+                    </ListBox.ItemTemplate>
+                  </ListBox>
+                  <!-- ADD discipline keywords -->
+                  <Button Tag="DisKey" Click="AddRecordByTagToLocal" Style="{DynamicResource AddButton}"
                           Name="TopicsAndKeywordsPage_DiscilineKeywordAdd">
-                                        <StackPanel VerticalAlignment="Center" Orientation="Horizontal">
-                                            <Image Style="{DynamicResource AddImageStyle}" Source="pack://application:,,,/ArcGIS.Desktop.Resources;component/Images/GenericAddGreen16.png"/>
-                                            <TextBlock Style="{DynamicResource ButtonTextStyle}" Text="{x:Static r:Resources.BTN_KEY_NEW_DIS}"/>
-                                        </StackPanel>
-                                    </Button>
-                                </StackPanel>
-                            </Border>
+                    <StackPanel VerticalAlignment="Center" Orientation="Horizontal">
+                      <Image Style="{DynamicResource AddImageStyle}" Source="{DynamicResource GenericAddGreen16}"/>
+                      <TextBlock Style="{DynamicResource ButtonTextStyle}" Text="{x:Static r:Resources.BTN_KEY_NEW_DIS}"/>
+                    </StackPanel>
+                  </Button>
+                </StackPanel>
+              </Border>
 
-                            <!-- stratum keywords -->
-                            <Border Style="{DynamicResource EditorBorder2Style}">
-                                <StackPanel>
-                                    <ListBox Style="{DynamicResource EditorNoScrollListBoxStyle}" ItemsSource="{Binding XPath=stratKeys}">
-                                        <ListBox.ItemsPanel>
-                                            <ItemsPanelTemplate>
-                                                <StackPanel/>
-                                            </ItemsPanelTemplate>
-                                        </ListBox.ItemsPanel>
-                                        <ListBox.ItemTemplate>
-                                            <DataTemplate>
-                                                <Expander Style="{DynamicResource EditorExpander2Style}" 
+              <!-- stratum keywords -->
+              <Border Style="{DynamicResource EditorBorder2Style}">
+                <StackPanel>
+                  <ListBox Style="{DynamicResource EditorNoScrollListBoxStyle}" ItemsSource="{Binding XPath=stratKeys}">
+                    <ListBox.ItemsPanel>
+                      <ItemsPanelTemplate>
+                        <StackPanel/>
+                      </ItemsPanelTemplate>
+                    </ListBox.ItemsPanel>
+                    <ListBox.ItemTemplate>
+                      <DataTemplate>
+                        <Expander Style="{DynamicResource EditorExpander2Style}" 
                                   AutomationProperties.AutomationId="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type ListBoxItem}}, Converter={StaticResource _lbiToAutoIdConverter}, ConverterParameter=TopicsAndKeywordsPage_StratumKeywordGroup}">
-                                                    <Expander.Header>
-                                                        <DockPanel HorizontalAlignment="{Binding HorizontalAlignment,
+                          <Expander.Header>
+                            <DockPanel HorizontalAlignment="{Binding HorizontalAlignment,
                               RelativeSource={RelativeSource FindAncestor,
                               AncestorType={x:Type ContentPresenter}},
                               Mode=OneWayToSource}" LastChildFill="True">
-                                                            <Button DockPanel.Dock="Right" Click="DeleteItem" Style="{DynamicResource DeleteButton}"
+                              <Button DockPanel.Dock="Right" Click="DeleteItem" Style="{DynamicResource DeleteButton}"
                                       Name="TopicsAndKeywordsPage_StratumKeywordDelete">
-                                                                <Image Style="{DynamicResource DeleteImageStyle}" Source="pack://application:,,,/ArcGIS.Desktop.Resources;component/Images/GenericDeleteRed16.png"/>
-                                                            </Button>
-                                                            <Label Style="{DynamicResource EditorHExpanderLabel}"  Content="{x:Static r:Resources.LBL_DESC_STRATKEY}"/>
-                                                        </DockPanel>
-                                                    </Expander.Header>
-                                                    <StackPanel>
-                                                        <tp:MTK_MD_Keywords ToolTip="{x:Static r:Definitions.MD_Keywords_stratum}"/>
-                                                        <Border Style="{DynamicResource EditorBorderHRuleStyle}" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" >
-                                                        </Border>
-                                                    </StackPanel>
-                                                </Expander>
-                                            </DataTemplate>
-                                        </ListBox.ItemTemplate>
-                                    </ListBox>
-                                    <!-- ADD statum keywords -->
-                                    <Button Tag="StratKey" Click="AddRecordByTagToLocal" Style="{DynamicResource AddButton}"
+                                <Image Style="{DynamicResource DeleteImageStyle}" Source="{DynamicResource GenericDeleteRed16}"/>
+                              </Button>
+                              <Label Style="{DynamicResource EditorHExpanderLabel}"  Content="{x:Static r:Resources.LBL_DESC_STRATKEY}"/>
+                            </DockPanel>
+                          </Expander.Header>
+                          <StackPanel>
+                            <tp:MTK_MD_Keywords ToolTip="{x:Static r:Definitions.MD_Keywords_stratum}"/>
+                            <Border Style="{DynamicResource EditorBorderHRuleStyle}" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" >
+                            </Border>
+                          </StackPanel>
+                        </Expander>
+                      </DataTemplate>
+                    </ListBox.ItemTemplate>
+                  </ListBox>
+                  <!-- ADD statum keywords -->
+                      <Button Tag="StratKey" Click="AddRecordByTagToLocal" Style="{DynamicResource AddButton}"
                               Name="TopicsAndKeywordsPage_StratumKeywordAdd">
-                                        <StackPanel VerticalAlignment="Center" Orientation="Horizontal">
-                                            <Image Style="{DynamicResource AddImageStyle}" Source="pack://application:,,,/ArcGIS.Desktop.Resources;component/Images/GenericAddGreen16.png"/>
-                                            <TextBlock Style="{DynamicResource ButtonTextStyle}" Text="{x:Static r:Resources.BTN_KEY_NEW_STRAT}"/>
-                                        </StackPanel>
-                                    </Button>
-                                </StackPanel>
-                            </Border>
+                        <StackPanel VerticalAlignment="Center" Orientation="Horizontal">
+                      <Image Style="{DynamicResource AddImageStyle}" Source="{DynamicResource GenericAddGreen16}"/>
+                      <TextBlock Style="{DynamicResource ButtonTextStyle}" Text="{x:Static r:Resources.BTN_KEY_NEW_STRAT}"/>
+                    </StackPanel>
+                  </Button>
+                </StackPanel>
+              </Border>
 
-                            <!-- other keywords -->
-                            <Border Style="{DynamicResource EditorBorder2Style}" tu:MetadataStyle.OnlyProfiles="ISO19139,NAP,INSPIRE,ISO19115_3">
-                                <StackPanel>
-                                    <ListBox Style="{DynamicResource EditorNoScrollListBoxStyle}" ItemsSource="{Binding XPath=otherKeys}">
-                                        <ListBox.ItemsPanel>
-                                            <ItemsPanelTemplate>
-                                                <StackPanel/>
-                                            </ItemsPanelTemplate>
-                                        </ListBox.ItemsPanel>
-                                        <ListBox.ItemTemplate>
-                                            <DataTemplate>
-                                                <Expander Style="{DynamicResource EditorExpander2Style}" 
+              <!-- other keywords -->
+              <Border Style="{DynamicResource EditorBorder2Style}" tu:MetadataStyle.OnlyProfiles="ISO19139,NAP,INSPIRE,ISO19115_3">
+                <StackPanel>
+                  <ListBox Style="{DynamicResource EditorNoScrollListBoxStyle}" ItemsSource="{Binding XPath=otherKeys}">
+                    <ListBox.ItemsPanel>
+                      <ItemsPanelTemplate>
+                        <StackPanel/>
+                      </ItemsPanelTemplate>
+                    </ListBox.ItemsPanel>
+                    <ListBox.ItemTemplate>
+                      <DataTemplate>
+                        <Expander Style="{DynamicResource EditorExpander2Style}" 
                                   AutomationProperties.AutomationId="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type ListBoxItem}}, Converter={StaticResource _lbiToAutoIdConverter}, ConverterParameter=TopicsAndKeywordsPage_OtherKeywordGroup}">
-                                                    <Expander.Header>
-                                                        <DockPanel HorizontalAlignment="{Binding HorizontalAlignment,
+                          <Expander.Header>
+                            <DockPanel HorizontalAlignment="{Binding HorizontalAlignment,
                               RelativeSource={RelativeSource FindAncestor,
                               AncestorType={x:Type ContentPresenter}},
                               Mode=OneWayToSource}" LastChildFill="True">
-                                                            <Button DockPanel.Dock="Right" Click="DeleteItem" Style="{DynamicResource DeleteButton}"
+                              <Button DockPanel.Dock="Right" Click="DeleteItem" Style="{DynamicResource DeleteButton}"
                                       Name="TopicsAndKeywordsPage_OtherKeywordDelete">
-                                                                <Image Style="{DynamicResource DeleteImageStyle}" Source="pack://application:,,,/ArcGIS.Desktop.Resources;component/Images/GenericDeleteRed16.png"/>
-                                                            </Button>
-                                                            <Label Style="{DynamicResource EditorHExpanderLabel}"  Content="{x:Static r:Resources.LBL_DESC_OTHERKEY}"/>
-                                                        </DockPanel>
-                                                    </Expander.Header>
-                                                    <StackPanel>
-                                                        <tp:MTK_MD_Keywords ToolTip="{x:Static r:Definitions.MD_Keywords_other}"/>
-                                                        <Border Style="{DynamicResource EditorBorderHRuleStyle}" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" >
-                                                        </Border>
-                                                    </StackPanel>
-                                                </Expander>
-                                            </DataTemplate>
-                                        </ListBox.ItemTemplate>
-                                    </ListBox>
-                                    <!-- ADD other keywords -->
-                                    <Button Tag="OtherKey" Click="AddRecordByTagToLocal" Style="{DynamicResource AddButton}"
+                                <Image Style="{DynamicResource DeleteImageStyle}" Source="{DynamicResource GenericDeleteRed16}"/>
+                              </Button>
+                              <Label Style="{DynamicResource EditorHExpanderLabel}"  Content="{x:Static r:Resources.LBL_DESC_OTHERKEY}"/>
+                            </DockPanel>
+                          </Expander.Header>
+                          <StackPanel>
+                            <tp:MTK_MD_Keywords ToolTip="{x:Static r:Definitions.MD_Keywords_other}"/>
+                            <Border Style="{DynamicResource EditorBorderHRuleStyle}" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" >
+                            </Border>
+                          </StackPanel>
+                        </Expander>
+                      </DataTemplate>
+                    </ListBox.ItemTemplate>
+                  </ListBox>
+                  <!-- ADD other keywords -->
+                  <Button Tag="OtherKey" Click="AddRecordByTagToLocal" Style="{DynamicResource AddButton}"
                           Name="TopicsAndKeywordsPage_OtherKeywordAdd">
-                                        <StackPanel VerticalAlignment="Center" Orientation="Horizontal">
-                                            <Image Style="{DynamicResource AddImageStyle}" Source="pack://application:,,,/ArcGIS.Desktop.Resources;component/Images/GenericAddGreen16.png"/>
-                                            <TextBlock Style="{DynamicResource ButtonTextStyle}" Text="{x:Static r:Resources.BTN_KEY_NEW_OTHER}"/>
-                                        </StackPanel>
-                                    </Button>
-                                </StackPanel>
-                            </Border>
+                    <StackPanel VerticalAlignment="Center" Orientation="Horizontal">
+                      <Image Style="{DynamicResource AddImageStyle}" Source="{DynamicResource GenericAddGreen16}"/>
+                      <TextBlock Style="{DynamicResource ButtonTextStyle}" Text="{x:Static r:Resources.BTN_KEY_NEW_OTHER}"/>
+                    </StackPanel>
+                  </Button>
+                </StackPanel>
+              </Border>
 
-                            <!-- product keys -->
-                            <Border Style="{DynamicResource EditorBorder2Style}" tu:MetadataStyle.OnlyProfiles="NAP,ISO19115_3" >
-                                <StackPanel>
-                                    <ListBox Style="{DynamicResource EditorNoScrollListBoxStyle}" ItemsSource="{Binding XPath=productKeys}">
-                                        <ListBox.ItemsPanel>
-                                            <ItemsPanelTemplate>
-                                                <StackPanel/>
-                                            </ItemsPanelTemplate>
-                                        </ListBox.ItemsPanel>
-                                        <ListBox.ItemTemplate>
-                                            <DataTemplate>
-                                                <Expander Style="{DynamicResource EditorExpander2Style}" 
+              <!-- product keys -->
+              <Border Style="{DynamicResource EditorBorder2Style}" tu:MetadataStyle.OnlyProfiles="NAP,ISO19115_3" >
+                <StackPanel>
+                  <ListBox Style="{DynamicResource EditorNoScrollListBoxStyle}" ItemsSource="{Binding XPath=productKeys}">
+                    <ListBox.ItemsPanel>
+                      <ItemsPanelTemplate>
+                        <StackPanel/>
+                      </ItemsPanelTemplate>
+                    </ListBox.ItemsPanel>
+                    <ListBox.ItemTemplate>
+                      <DataTemplate>
+                        <Expander Style="{DynamicResource EditorExpander2Style}" 
                                   AutomationProperties.AutomationId="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type ListBoxItem}}, Converter={StaticResource _lbiToAutoIdConverter}, ConverterParameter=TopicsAndKeywordsPage_ProductKeywordGroup}">
-                                                    <Expander.Header>
-                                                        <DockPanel HorizontalAlignment="{Binding HorizontalAlignment,
+                          <Expander.Header>
+                            <DockPanel HorizontalAlignment="{Binding HorizontalAlignment,
                               RelativeSource={RelativeSource FindAncestor,
                               AncestorType={x:Type ContentPresenter}},
                               Mode=OneWayToSource}" LastChildFill="True">
-                                                            <Button DockPanel.Dock="Right" Click="DeleteItem" Style="{DynamicResource DeleteButton}"
+                              <Button DockPanel.Dock="Right" Click="DeleteItem" Style="{DynamicResource DeleteButton}"
                                       Name="TopicsAndKeywordsPage_ProductKeywordDelete">
-                                                                <Image Style="{DynamicResource DeleteImageStyle}" Source="pack://application:,,,/ArcGIS.Desktop.Resources;component/Images/GenericDeleteRed16.png"/>
-                                                            </Button>
-                                                            <Label Style="{DynamicResource EditorHExpanderLabel}"  Content="{x:Static r:Resources.LBL_DESC_PRODUCTKEY}"/>
-                                                        </DockPanel>
-                                                    </Expander.Header>
-                                                    <StackPanel>
-                                                        <tp:MTK_MD_Keywords ToolTip="{x:Static r:Definitions.MD_Keywords_NAP_product}"/>
-                                                        <Border Style="{DynamicResource EditorBorderHRuleStyle}" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" >
-                                                        </Border>
-                                                    </StackPanel>
-                                                </Expander>
-                                            </DataTemplate>
-                                        </ListBox.ItemTemplate>
-                                    </ListBox>
-                                    <!-- ADD product keywords -->
-                                    <Button Tag="ProductKey" Click="AddRecordByTagToLocal" Style="{DynamicResource AddButton}"
-                          Name="TopicsAndKeywordsPage_ProductKeywordAdd">
-                                        <StackPanel VerticalAlignment="Center" Orientation="Horizontal">
-                                            <Image Style="{DynamicResource AddImageStyle}" Source="pack://application:,,,/ArcGIS.Desktop.Resources;component/Images/GenericAddGreen16.png"/>
-                                            <TextBlock Style="{DynamicResource ButtonTextStyle}" Text="{x:Static r:Resources.BTN_KEY_NEW_PRODUCT}"/>
-                                        </StackPanel>
-                                    </Button>
-                                </StackPanel>
+                                <Image Style="{DynamicResource DeleteImageStyle}" Source="{DynamicResource GenericDeleteRed16}"/>
+                              </Button>
+                              <Label Style="{DynamicResource EditorHExpanderLabel}"  Content="{x:Static r:Resources.LBL_DESC_PRODUCTKEY}"/>
+                            </DockPanel>
+                          </Expander.Header>
+                          <StackPanel>
+                            <tp:MTK_MD_Keywords ToolTip="{x:Static r:Definitions.MD_Keywords_NAP_product}"/>
+                            <Border Style="{DynamicResource EditorBorderHRuleStyle}" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" >
                             </Border>
+                          </StackPanel>
+                        </Expander>
+                      </DataTemplate>
+                    </ListBox.ItemTemplate>
+                  </ListBox>
+                  <!-- ADD product keywords -->
+                  <Button Tag="ProductKey" Click="AddRecordByTagToLocal" Style="{DynamicResource AddButton}"
+                          Name="TopicsAndKeywordsPage_ProductKeywordAdd">
+                      <StackPanel VerticalAlignment="Center" Orientation="Horizontal">
+                      <Image Style="{DynamicResource AddImageStyle}" Source="{DynamicResource GenericAddGreen16}"/>
+                      <TextBlock Style="{DynamicResource ButtonTextStyle}" Text="{x:Static r:Resources.BTN_KEY_NEW_PRODUCT}"/>
+                    </StackPanel>
+                  </Button>
+                </StackPanel>
+              </Border>
 
-                            <!-- sub topic keys -->
-                            <Border Style="{DynamicResource EditorBorder2Style}" tu:MetadataStyle.OnlyProfiles="NAP,ISO19115_3" >
-                                <StackPanel>
-                                    <ListBox Style="{DynamicResource EditorNoScrollListBoxStyle}" ItemsSource="{Binding XPath=subTopicCatKeys}">
-                                        <ListBox.ItemsPanel>
-                                            <ItemsPanelTemplate>
-                                                <StackPanel/>
-                                            </ItemsPanelTemplate>
-                                        </ListBox.ItemsPanel>
-                                        <ListBox.ItemTemplate>
-                                            <DataTemplate>
-                                                <Expander Style="{DynamicResource EditorExpander2Style}" 
+              <!-- sub topic keys -->
+              <Border Style="{DynamicResource EditorBorder2Style}" tu:MetadataStyle.OnlyProfiles="NAP,ISO19115_3" >
+                <StackPanel>
+                  <ListBox Style="{DynamicResource EditorNoScrollListBoxStyle}" ItemsSource="{Binding XPath=subTopicCatKeys}">
+                    <ListBox.ItemsPanel>
+                      <ItemsPanelTemplate>
+                        <StackPanel/>
+                      </ItemsPanelTemplate>
+                    </ListBox.ItemsPanel>
+                    <ListBox.ItemTemplate>
+                      <DataTemplate>
+                        <Expander Style="{DynamicResource EditorExpander2Style}" 
                                   AutomationProperties.AutomationId="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type ListBoxItem}}, Converter={StaticResource _lbiToAutoIdConverter}, ConverterParameter=TopicsAndKeywordsPage_SubTopicKeywordGroup}">
-                                                    <Expander.Header>
-                                                        <DockPanel HorizontalAlignment="{Binding HorizontalAlignment,
+                          <Expander.Header>
+                            <DockPanel HorizontalAlignment="{Binding HorizontalAlignment,
                               RelativeSource={RelativeSource FindAncestor,
                               AncestorType={x:Type ContentPresenter}},
                               Mode=OneWayToSource}" LastChildFill="True">
-                                                            <Button DockPanel.Dock="Right" Click="DeleteItem" Style="{DynamicResource DeleteButton}"
+                              <Button DockPanel.Dock="Right" Click="DeleteItem" Style="{DynamicResource DeleteButton}"
                                       Name="TopicsAndKeywordsPage_SubTopicKeywordDelete">
-                                                                <Image Style="{DynamicResource DeleteImageStyle}" Source="pack://application:,,,/ArcGIS.Desktop.Resources;component/Images/GenericDeleteRed16.png"/>
-                                                            </Button>
-                                                            <Label Style="{DynamicResource EditorHExpanderLabel}"  Content="{x:Static r:Resources.LBL_DESC_SUBTOPICKEY}"/>
-                                                        </DockPanel>
-                                                    </Expander.Header>
-                                                    <StackPanel>
-                                                        <tp:MTK_MD_Keywords ToolTip="{x:Static r:Definitions.MD_Keywords_NAP_subtopic}"/>
-                                                        <Border Style="{DynamicResource EditorBorderHRuleStyle}" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" >
-                                                        </Border>
-                                                    </StackPanel>
-                                                </Expander>
-                                            </DataTemplate>
-                                        </ListBox.ItemTemplate>
-                                    </ListBox>
-                                    <!-- ADD product keywords -->
-                                    <Button Tag="SubTopicKey" Click="AddRecordByTagToLocal" Style="{DynamicResource AddButton}"
-                          Name="TopicsAndKeywordsPage_SubTopicKeywordAdd">
-                                        <StackPanel VerticalAlignment="Center" Orientation="Horizontal">
-                                            <Image Style="{DynamicResource AddImageStyle}" Source="pack://application:,,,/ArcGIS.Desktop.Resources;component/Images/GenericAddGreen16.png"/>
-                                            <TextBlock Style="{DynamicResource ButtonTextStyle}" Text="{x:Static r:Resources.BTN_KEY_NEW_SUBTOPIC}"/>
-                                        </StackPanel>
-                                    </Button>
-                                </StackPanel>
+                                <Image Style="{DynamicResource DeleteImageStyle}" Source="{DynamicResource GenericDeleteRed16}"/>
+                              </Button>
+                              <Label Style="{DynamicResource EditorHExpanderLabel}"  Content="{x:Static r:Resources.LBL_DESC_SUBTOPICKEY}"/>
+                            </DockPanel>
+                          </Expander.Header>
+                          <StackPanel>
+                            <tp:MTK_MD_Keywords ToolTip="{x:Static r:Definitions.MD_Keywords_NAP_subtopic}"/>
+                            <Border Style="{DynamicResource EditorBorderHRuleStyle}" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" >
                             </Border>
-                        </StackPanel>
-                    </DataTemplate>
-                </ListBox.ItemTemplate>
-            </ListBox>
+                          </StackPanel>
+                        </Expander>
+                      </DataTemplate>
+                    </ListBox.ItemTemplate>
+                  </ListBox>
+                  <!-- ADD product keywords -->
+                  <Button Tag="SubTopicKey" Click="AddRecordByTagToLocal" Style="{DynamicResource AddButton}"
+                          Name="TopicsAndKeywordsPage_SubTopicKeywordAdd">
+                      <StackPanel VerticalAlignment="Center" Orientation="Horizontal">
+                      <Image Style="{DynamicResource AddImageStyle}" Source="{DynamicResource GenericAddGreen16}"/>
+                      <TextBlock Style="{DynamicResource ButtonTextStyle}" Text="{x:Static r:Resources.BTN_KEY_NEW_SUBTOPIC}"/>
+                    </StackPanel>
+                  </Button>
+                </StackPanel>
+              </Border>
+            </StackPanel>
+          </DataTemplate>
+        </ListBox.ItemTemplate>
+      </ListBox>
 
-            <!-- validate after all anchors are loaded -->
-            <v:PageValidateControl/>
+      <!-- validate after all anchors are loaded -->
+      <v:PageValidateControl/>
 
-        </StackPanel>
-    </Grid>
+    </StackPanel>
+  </Grid>
 </p:EditorPage>

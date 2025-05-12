@@ -15,14 +15,14 @@ using ArcGIS.Desktop.Metadata.Editor.Pages;
 
 namespace IPRMetadata.Pages
 {
-    /// <summary>
-    /// Interaction logic for MTK_CountryCode.xaml
-    /// </summary>
-    internal partial class MTK_CountryCode : EditorPage
+  /// <summary>
+  /// Interaction logic for MTK_CountryCode.xaml
+  /// </summary>
+  internal partial class MTK_CountryCode : EditorPage
+  {
+    public MTK_CountryCode()
     {
-        public MTK_CountryCode()
-        {
-            InitializeComponent();
-        }
+      InitializeComponent();
     }
+  }
 }

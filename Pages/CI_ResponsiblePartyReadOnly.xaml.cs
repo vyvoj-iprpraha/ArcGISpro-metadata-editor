@@ -11,32 +11,32 @@ See the License for the specific language governing permissions and
 limitations under the License.​
 */
 
-using ArcGIS.Desktop.Metadata.Editor.Pages;
 using System.Windows.Controls;
+using ArcGIS.Desktop.Metadata.Editor.Pages;
 
 namespace IPRMetadata.Pages
 {
-    /// <summary>
-    /// Interaction logic for MTK_CI_ResponsiblePartyReadOnly.xaml
-    /// </summary>
-    internal partial class MTK_CI_ResponsiblePartyReadOnly : EditorPage
+  /// <summary>
+  /// Interaction logic for MTK_CI_ResponsiblePartyReadOnly.xaml
+  /// </summary>
+  internal partial class MTK_CI_ResponsiblePartyReadOnly : EditorPage
+  {
+    public MTK_CI_ResponsiblePartyReadOnly()
     {
-        public MTK_CI_ResponsiblePartyReadOnly()
-        {
-            InitializeComponent();
-        }
-
-        public override string DefaultValue
-        {
-            get
-            {
-                return Utils.Utils.ExtractResponsiblePartyLabel(this, IPRMetadata.Properties.Resources.LBL_CI_PARTY_READONLY_FORMAT);
-            }
-
-            set
-            {
-                // NOOP
-            }
-        }
+      InitializeComponent();
     }
+
+    public override string DefaultValue
+    {
+      get
+      {
+        return Utils.Utils.ExtractResponsiblePartyLabel(this, Utils.Utils.LBL_CI_PARTY_READONLY_FORMAT);
+      }
+
+      set
+      {
+        // NOOP
+      }
+    }
+  }
 }

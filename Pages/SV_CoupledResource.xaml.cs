@@ -15,14 +15,14 @@ using ArcGIS.Desktop.Metadata.Editor.Pages;
 
 namespace IPRMetadata.Pages
 {
-    /// <summary>
-    /// Interaction logic for MTK_SV_CoupledResource.xaml
-    /// </summary>
-    internal partial class MTK_SV_CoupledResource : EditorPage
+  /// <summary>
+  /// Interaction logic for MTK_SV_CoupledResource.xaml
+  /// </summary>
+  internal partial class MTK_SV_CoupledResource : EditorPage
+  {
+    public MTK_SV_CoupledResource()
     {
-        public MTK_SV_CoupledResource()
-        {
-            InitializeComponent();
-        }
+      InitializeComponent();
     }
+  }
 }

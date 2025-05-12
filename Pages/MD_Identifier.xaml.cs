@@ -11,51 +11,52 @@ See the License for the specific language governing permissions and
 limitations under the License.​
 */
 
-using ArcGIS.Desktop.Metadata.Editor.Pages;
 using System;
 using System.Collections.Generic;
 using System.Windows.Controls;
 using System.Xml;
 
+using ArcGIS.Desktop.Metadata.Editor.Pages;
+
 namespace IPRMetadata.Pages
 {
-    /// <summary>
-    /// Interaction logic for MTK_MD_Identifier.xaml
-    /// </summary>
-    internal partial class MTK_MD_Identifier : EditorPage
+  /// <summary>
+  /// Interaction logic for MTK_MD_Identifier.xaml
+  /// </summary>
+  internal partial class MTK_MD_Identifier : EditorPage
+  {
+    public MTK_MD_Identifier()
     {
-        public MTK_MD_Identifier()
-        {
-            InitializeComponent();
-        }
-
-        public override string DefaultValue
-        {
-            get
-            {
-                IEnumerable<XmlNode> data = GetXmlDataContext();
-                if (null == data)
-                    return String.Empty;
-
-                foreach (XmlNode root in data)
-                {
-                    // Person
-                    XmlNode node = root.SelectSingleNode("identCode");
-                    if (null != node && 0 < node.InnerText.Length)
-                    {
-                        return node.InnerText;
-                    }
-
-                    break;
-                }
-
-                return String.Empty; // Properties.Resources.LBL_IDENTIFIER_EMPTY;
-            }
-            set
-            {
-                // NOOP
-            }
-        }
-
+      InitializeComponent();
     }
+
+    public override string DefaultValue
+    {
+      get
+      {
+        IEnumerable<XmlNode> data = GetXmlDataContext();
+        if (null == data)
+          return String.Empty;
+
+        foreach (XmlNode root in data)
+        {
+          // Person
+          XmlNode node = root.SelectSingleNode("identCode");
+          if (null != node && 0 < node.InnerText.Length)
+          {
+            return node.InnerText;
+          }
+
+          break;
+        }
+
+        return String.Empty; // Properties.Resources.LBL_IDENTIFIER_EMPTY;
+      }
+      set
+      {
+        // NOOP
+      }
+    }
+
+  }
 }

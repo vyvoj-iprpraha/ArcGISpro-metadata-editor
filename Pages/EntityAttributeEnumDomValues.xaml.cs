@@ -11,19 +11,19 @@ See the License for the specific language governing permissions and
 limitations under the License.​
 */
 
-using ArcGIS.Desktop.Metadata.Editor.Pages;
 using System.Windows.Controls;
+using ArcGIS.Desktop.Metadata.Editor.Pages;
 
 namespace IPRMetadata.Pages
 {
-    /// <summary>
-    /// Interaction logic for MTK_EntityAttributeEnumDomValues.xaml
-    /// </summary>
-    internal partial class MTK_EntityAttributeEnumDomValues : EditorPage
+  /// <summary>
+  /// Interaction logic for MTK_EntityAttributeEnumDomValues.xaml
+  /// </summary>
+  internal partial class MTK_EntityAttributeEnumDomValues : EditorPage
+  {
+    public MTK_EntityAttributeEnumDomValues()
     {
-        public MTK_EntityAttributeEnumDomValues()
-        {
-            InitializeComponent();
-        }
+      InitializeComponent();
     }
+  }
 }

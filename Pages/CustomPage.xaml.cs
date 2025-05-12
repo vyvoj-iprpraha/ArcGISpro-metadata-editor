@@ -11,8 +11,6 @@ See the License for the specific language governing permissions and
 limitations under the License.​
 */
 
-using ArcGIS.Desktop.Metadata;
-using ArcGIS.Desktop.Metadata.Editor.Pages;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -28,35 +26,38 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
+using ArcGIS.Desktop.Metadata;
+using ArcGIS.Desktop.Metadata.Editor.Pages;
+
 namespace IPRMetadata.Pages
 {
-    internal class CustomPageLabel : ISidebarLabel
+  internal class CustomPageLabel : ISidebarLabel
+  {
+    string ISidebarLabel.SidebarLabel
     {
-        string ISidebarLabel.SidebarLabel
-        {
-            get { return CustomPageLabel.SidebarLabel; }
-        }
-
-        public static string SidebarLabel
-        {
-            get { return "Custom Page"; }
-        }
+      get { return CustomPageLabel.SidebarLabel; }
     }
 
-    /// <summary>
-    /// Interaction logic for CustomPage.xaml
-    /// </summary>
-    public partial class CustomPage : EditorPage
+    public static string SidebarLabel
     {
-        public CustomPage()
-        {
-            InitializeComponent();
-
-        }
-
-        public override string SidebarLabel
-        {
-            get { return CustomPageLabel.SidebarLabel; }
-        }
+      get { return "Custom Page"; }
     }
+  }
+
+  /// <summary>
+  /// Interaction logic for CustomPage.xaml
+  /// </summary>
+  public partial class CustomPage : EditorPage
+  {
+    public CustomPage()
+    {
+      InitializeComponent();
+
+    }
+
+    public override string SidebarLabel
+    {
+      get { return CustomPageLabel.SidebarLabel; }
+    }
+  }
 }

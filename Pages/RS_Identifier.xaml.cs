@@ -15,14 +15,14 @@ using ArcGIS.Desktop.Metadata.Editor.Pages;
 
 namespace IPRMetadata.Pages
 {
-    /// <summary>
-    /// Interaction logic for MTK_RS_Identifier.xaml
-    /// </summary>
-    internal partial class MTK_RS_Identifier : EditorPage
+  /// <summary>
+  /// Interaction logic for MTK_RS_Identifier.xaml
+  /// </summary>
+  internal partial class MTK_RS_Identifier : EditorPage
+  {
+    public MTK_RS_Identifier()
     {
-        public MTK_RS_Identifier()
-        {
-            InitializeComponent();
-        }
+      InitializeComponent();
     }
+  }
 }

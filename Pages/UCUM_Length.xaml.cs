@@ -11,19 +11,19 @@ See the License for the specific language governing permissions and
 limitations under the License.​
 */
 
-using ArcGIS.Desktop.Metadata.Editor.Pages;
 using System.Windows.Controls;
+using ArcGIS.Desktop.Metadata.Editor.Pages;
 
 namespace IPRMetadata.Pages
 {
-    /// <summary>
-    /// Interaction logic for MTK_UCUM_Length.xaml
-    /// </summary>
-    internal partial class MTK_UCUM_Length : EditorPage
+  /// <summary>
+  /// Interaction logic for MTK_UCUM_Length.xaml
+  /// </summary>
+  internal partial class MTK_UCUM_Length : EditorPage
+  {
+    public MTK_UCUM_Length()
     {
-        public MTK_UCUM_Length()
-        {
-            InitializeComponent();
-        }
+      InitializeComponent();
     }
+  }
 }

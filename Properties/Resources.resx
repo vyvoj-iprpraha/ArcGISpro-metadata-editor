@@ -164,6 +164,7 @@
   </data>
   <data name="BTN_KEY_NEW_THEME" xml:space="preserve">
     <value>Přidat další klíčové slovo IPR</value>
+    <comment>Toto</comment>
   </data>
   <data name="BTN_NEW" xml:space="preserve">
     <value>New</value>
@@ -248,6 +249,7 @@
   </data>
   <data name="LBL_DESC_THEMEKEY" xml:space="preserve">
     <value>Další klíčové slovo IPR</value>
+    <comment>Toto</comment>
   </data>
   <data name="LBL_DESC_TITLE" xml:space="preserve">
     <value>Title</value>
@@ -2452,6 +2454,7 @@ Do you want to upgrade the FGDC metadata content to the ArcGIS metadata format?<
   </data>
   <data name="THEME_KEYWORD_SEARCHING_TEXT" xml:space="preserve">
     <value>Searching GEMET...</value>
+    <comment>Toto</comment>
   </data>
   <data name="UNABLETO_RETRIEVE_THEME_KEYWORD" xml:space="preserve">
     <value>Unable to retrieve theme keyword list. Please check your internet connection and try again.</value>
@@ -2479,29 +2482,39 @@ Do you want to upgrade the FGDC metadata content to the ArcGIS metadata format?<
   </data>
   <data name="DATA_STORE" xml:space="preserve">
     <value>Datový sklad                   </value>
+    <comment>Toto</comment>
   </data>
   <data name="OPENDATA_CATEGORY" xml:space="preserve">
     <value>Kategorie otevřených dat</value>
   </data>
   <data name="THEME_INSPIRE" xml:space="preserve">
     <value>Téma INSPIRE   </value>
+    <comment>Toto</comment>
   </data>
   <data name="THEME_IPR" xml:space="preserve">
     <value>Datový produkt</value>
+    <comment>Toto</comment>
   </data>
-  <data name="THEME_UAP" xml:space="preserve">
-    <value>Jev ÚAP             </value>
+  <data name="THEME_UAP_2020" xml:space="preserve">
+    <value>Jev ÚAP 2020             </value>
+    <comment>Toto</comment>
   </data>
   <data name="THEME_GEMET" xml:space="preserve">
     <value>Klíčové slovo GEMET </value>
+    <comment>Toto</comment>
   </data>
   <data name="IPR_KEYWORD" xml:space="preserve">
     <value>Klíčové slovo IPR(Téma)</value>
+    <comment>Toto</comment>
   </data>
   <data name="PUBLISH_ATTRIBUTE" xml:space="preserve">
     <value>Publish this attribute</value>
   </data>
   <data name="OTHER_IPR_KEYWORD" xml:space="preserve">
     <value>Doplňkové klíčové slovo IPR</value>
+  </data>
+  <data name="THEME_UAP_2024" xml:space="preserve">
+    <value>Jev ÚAP</value>
+    <comment>Toto</comment>
   </data>
 </root>

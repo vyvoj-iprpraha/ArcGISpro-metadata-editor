@@ -53,11 +53,13 @@ limitations under the License.​
             <code value="Energetika" source="Custom" stdvalue="energetika">Energetika</code>
             <code value="Kanalizace" source="Custom" stdvalue="kanalizace">Kanalizace</code>
             <code value="Katastr" source="Custom" stdvalue="katastr">Katastr</code>
+            <code value="Komerční vybavenost" source="Custom" stdvalue="komercni_vybavenost">Komerční vybavenost</code>
             <code value="Kontaminace" source="Custom" stdvalue="kontaminace">Kontaminace</code>
             <code value="Krajina" source="Custom" stdvalue="krajina">Krajina</code>
             <code value="Krizové řízení" source="Custom" stdvalue="krizove_rizeni">Krizové řízení</code>
             <code value="Letecká doprava" source="Custom" stdvalue="letecka_doprava">Letecká doprava</code>
             <code value="Nerostné zdroje" source="Custom" stdvalue="nerostne_zdroje">Nerostné zdroje</code>
+            <code value="Občanská vybavenost" source="Custom" stdvalue="obcanska_vybavenost">Občanská vybavenost</code>
             <code value="Ochranná pásma" source="Custom" stdvalue="ochranna_pasma">Ochranná pásma</code>        
             <code value="Parcely" source="Custom" stdvalue="parcely">Parcely</code>
             <code value="Plyn" source="Custom" stdvalue="plyn">Plyn</code>

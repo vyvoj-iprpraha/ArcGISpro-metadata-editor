@@ -7,10 +7,10 @@ using System.Xml;
 
 namespace IPRMetadata.Pages
 {
-    /// <summary>
-    /// Interaction logic for MTK_INSPIRE_LegalConstraints.xaml
-    /// </summary>
-    internal partial class MTK_INSPIRE_LegalConstraints : EditorPage
+  /// <summary>
+  /// Interaction logic for MTK_INSPIRE_LegalConstraints.xaml
+  /// </summary>
+  internal partial class MTK_INSPIRE_LegalConstraints : EditorPage
     {
         public MTK_INSPIRE_LegalConstraints()
         {
@@ -29,11 +29,11 @@ namespace IPRMetadata.Pages
             IEnumerable<XmlNode> nodes = Utils.Utils.GetXmlDataContext(context);
             if (null != nodes)
             {
-                var node = (XmlDocument)nodes.First();
+                var node = (XmlDocument) nodes.First();
                 var parentNode = node.SelectSingleNode("/metadata/dataIdInfo");
                 XmlNode useLimNode = node.SelectSingleNode("/metadata/dataIdInfo/resConst/LegConsts/inspireAccessUseConditions/ConditionsAccUseCd");
                 XmlNode accessConstNode = node.SelectSingleNode("/metadata/dataIdInfo/resConst/LegConsts/inspirePublicAccessLimits/PublicAccessCd");
-
+                
                 if (useLimNode == null)
                 {
                     CreateInspireConstraint(parentNode, "InspireUseLim");

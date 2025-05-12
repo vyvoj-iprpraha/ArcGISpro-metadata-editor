@@ -15,14 +15,14 @@ using ArcGIS.Desktop.Metadata.Editor.Pages;
 
 namespace IPRMetadata.Pages
 {
-    /// <summary>
-    /// Interaction logic for MTK_MD_Dimension.xaml
-    /// </summary>
-    internal partial class MTK_MD_Dimension : EditorPage
+  /// <summary>
+  /// Interaction logic for MTK_MD_Dimension.xaml
+  /// </summary>
+  internal partial class MTK_MD_Dimension : EditorPage
+  {
+    public MTK_MD_Dimension()
     {
-        public MTK_MD_Dimension()
-        {
-            InitializeComponent();
-        }
+      InitializeComponent();
     }
+  }
 }

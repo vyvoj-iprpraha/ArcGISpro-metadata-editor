@@ -11,54 +11,55 @@ See the License for the specific language governing permissions and
 limitations under the License.​
 */
 
-using ArcGIS.Desktop.Framework;
-using ArcGIS.Desktop.Metadata;
-using ArcGIS.Desktop.Metadata.Editor.Pages;
 using System.Collections.Generic;
 using System.Windows;
 using System.Xml;
 
+using ArcGIS.Desktop.Framework;
+using ArcGIS.Desktop.Metadata;
+using ArcGIS.Desktop.Metadata.Editor.Pages;
+
 namespace IPRMetadata.Pages
 {
-    /// <summary>
-    /// Interaction logic for MTK_LanguageCode.xaml
-    /// </summary>
-    internal partial class MTK_LanguageCode : EditorPage
+  /// <summary>
+  /// Interaction logic for MTK_LanguageCode.xaml
+  /// </summary>
+  internal partial class MTK_LanguageCode : EditorPage
+  {
+    public MTK_LanguageCode()
     {
-        public MTK_LanguageCode()
-        {
-            InitializeComponent();
-            // Test
-        }
-
-        public void ValidateCode(object sender, RoutedEventArgs e)
-        {
-            object context = Utils.Utils.GetDataContext(sender);
-            IEnumerable<XmlNode> data = Utils.Utils.GetXmlDataContext(context);
-            if (null != data)
-            {
-                foreach (XmlNode node in data)
-                {
-                    XmlNode attr = node.SelectSingleNode("languageCode/@value");
-                    if (null != attr)
-                    {
-                        string code = attr.Value;
-                        if (2 == code.Length)
-                        {
-                            string threeLetter = Utils.LanguageConverter.GetThreeLetterCode(code);
-                            if (null != threeLetter)
-                            {
-                                attr.Value = threeLetter;
-
-                                var mdModule = FrameworkApplication.FindModule("esri_metadata_module") as IMetadataEditorHost;
-                                if (mdModule != null)
-                                    mdModule.UpdateDataContext(this as DependencyObject);
-                            }
-                        }
-                    }
-                    break; // just one
-                }
-            }
-        }
+      InitializeComponent();
+      // Test
     }
+
+    public void ValidateCode(object sender, RoutedEventArgs e)
+    {
+      object context = Utils.Utils.GetDataContext(sender);
+      IEnumerable<XmlNode> data = Utils.Utils.GetXmlDataContext(context);
+      if (null != data)
+      {
+        foreach (XmlNode node in data)
+        {
+          XmlNode attr = node.SelectSingleNode("languageCode/@value");
+          if (null != attr)
+          {
+            string code = attr.Value;
+            if (2 == code.Length)
+            {
+              string threeLetter = Utils.LanguageConverter.GetThreeLetterCode(code);
+              if (null != threeLetter)
+              {
+                attr.Value = threeLetter;
+
+                var mdModule = FrameworkApplication.FindModule("esri_metadata_module") as IMetadataEditorHost;
+                if (mdModule != null)
+                  mdModule.UpdateDataContext(this as DependencyObject);
+              }
+            }
+          }
+          break; // just one
+        }
+      }
+    }
+  }
 }

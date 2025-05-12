@@ -11,8 +11,6 @@ Redlands, California, USA 92373
 email: contracts@esri.com
 */
 
-using IPRMetadata.Properties;
-using Newtonsoft.Json.Linq;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
@@ -20,35 +18,37 @@ using System.Net.Http;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
+using Newtonsoft.Json.Linq;
+using IPRMetadata.Properties;
 
 namespace IPRMetadata.Pages
 {
-    /// <summary>
-    /// Interaction logic for MD_ThemeKeywords.xaml
-    /// </summary>
-    internal partial class MTK_MD_ThemeKeywords : ArcGIS.Desktop.Framework.Controls.ProWindow
+  /// <summary>
+  /// Interaction logic for MD_ThemeKeywords.xaml
+  /// </summary>
+  internal partial class MTK_MD_ThemeKeywords : ArcGIS.Desktop.Framework.Controls.ProWindow
+  {
+    internal struct GemetKeyword
     {
-        internal struct GemetKeyword
-        {
-            public string Label { get; set; }
-            public string Description { get; set; }
+      public string Label { get; set; }
+      public string Description { get; set; }
 
-            public GemetKeyword(string label, string description)
-            {
-                Label = label;
-                Description = description;
-            }
-        };
+      public GemetKeyword(string label, string description)
+      {
+        Label = label;
+        Description = description;
+      }
+    };
 
-        static readonly HttpClient _client = new HttpClient();
-        private Dictionary<string, List<GemetKeyword>> CachedKeywords { get; set; } = new Dictionary<string, List<GemetKeyword>>();
-        public List<GemetKeyword> SelectedKeywords { get; private set; } = new List<GemetKeyword>();
+    static readonly HttpClient _client = new HttpClient();
+    private Dictionary<string, List<GemetKeyword>> CachedKeywords { get; set; } = new Dictionary<string, List<GemetKeyword>>();
+    public List<GemetKeyword> SelectedKeywords { get; private set; } = new List<GemetKeyword>();
 
-        public Dictionary<string, string> LangDict { get; set; } = new Dictionary<string, string>()
+    public Dictionary<string, string> LangDict { get; set; } = new Dictionary<string, string>()
         {
             { "bg", Properties.Resources.LangName_Bulgarian },
             { "hr", Properties.Resources.LangName_Croatian },
-            { "cz", Properties.Resources.LangName_Czech},
+            { "cs", Properties.Resources.LangName_Czech},
             { "da", Properties.Resources.LangName_Danish },
             { "nl", Properties.Resources.LangName_Dutch },
             { "en", Properties.Resources.LangName_English },
@@ -71,84 +71,83 @@ namespace IPRMetadata.Pages
             { "sv", Properties.Resources.LangName_Swedish }
         }.OrderBy(pair => pair.Value).ToDictionary(pair => pair.Key, pair => pair.Value);
 
-        public ObservableCollection<GemetKeyword> Keywords { get; set; } = new ObservableCollection<GemetKeyword>();
+    public ObservableCollection<GemetKeyword> Keywords { get; set; } = new ObservableCollection<GemetKeyword>();
 
-        public MTK_MD_ThemeKeywords()
-        {
-            InitializeComponent();
-            DataContext = this;
-        }
-
-        private async Task Lookup(string selectedLanguageCode)
-        {
-            if (CachedKeywords.ContainsKey(selectedLanguageCode))
-            {
-                Keywords.Clear();
-
-                foreach (var keyword in CachedKeywords[selectedLanguageCode])
-                    Keywords.Add(keyword);
-
-                return;
-            }
-
-            searchingText.Text = Properties.Resources.THEME_KEYWORD_SEARCHING_TEXT;
-            var url = $"https://www.eionet.europa.eu/gemet/getConceptsMatchingRegexByThesaurus?thesaurus_uri=http://inspire.ec.europa.eu/theme/&language={selectedLanguageCode}&regex=.";
-            HttpResponseMessage response;
-
-            try
-            {
-                response = await _client.GetAsync(url);
-            }
-            catch
-            {
-                MessageBox.Show(Properties.Resources.UNABLETO_RETRIEVE_THEME_KEYWORD);
-                return;
-            }
-
-            if (response == null)
-                return;
-
-            var responseText = await response.Content.ReadAsStringAsync();
-            var jsonArr = JArray.Parse(responseText);
-            var keywords = new List<GemetKeyword>();
-
-            Keywords.Clear();
-            foreach (var item in jsonArr.Children())
-            {
-                var def = item.Value<JToken>("definition").Value<string>("string");
-                var label = item.Value<JToken>("preferredLabel").Value<string>("string");
-                var gemetKeyword = new GemetKeyword(label, def);
-                keywords.Add(gemetKeyword);
-                Keywords.Add(gemetKeyword);
-            }
-
-            CachedKeywords.Add(selectedLanguageCode, keywords);
-
-            searchingText.Text = "";
-        }
-
-        private async void ComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-            var selectedLanguageCode = (string)((ComboBox)sender).SelectedValue;
-
-            // Wait for any current searches to complete
-            while (!string.IsNullOrWhiteSpace(searchingText.Text))
-            {
-                await Task.Delay(1000);
-            }
-
-            await Lookup(selectedLanguageCode);
-        }
-
-        private void OK_Click(object sender, RoutedEventArgs e)
-        {
-            SelectedKeywords = GemetKeywordsList.SelectedItems.Cast<GemetKeyword>().ToList();
-            Close();
-        }
-
-        private void Cancel_Click(object sender, RoutedEventArgs e)
-        {
-            Close();
-        }
+    public MTK_MD_ThemeKeywords()
+    {
+      InitializeComponent();
+      DataContext = this;
     }
+
+    private async Task Lookup(string selectedLanguageCode)
+    {
+      Keywords.Clear();
+
+      if (CachedKeywords.ContainsKey(selectedLanguageCode))
+      {
+        foreach (var keyword in CachedKeywords[selectedLanguageCode])
+          Keywords.Add(keyword);
+
+        return;
+      }
+
+      searchingText.Text = Properties.Resources.THEME_KEYWORD_SEARCHING_TEXT;
+      var url = $"https://www.eionet.europa.eu/gemet/getConceptsMatchingRegexByThesaurus?thesaurus_uri=http://inspire.ec.europa.eu/theme/&language={selectedLanguageCode}&regex=.";
+      HttpResponseMessage response;
+
+      try
+      {
+        response = await _client.GetAsync(url);
+
+        if (response == null)
+          return;
+
+        var responseText = await response.Content.ReadAsStringAsync();
+        var jsonArr = JArray.Parse(responseText);
+        var keywords = new List<GemetKeyword>();
+
+        foreach (var item in jsonArr.Children())
+        {
+          var def = item.Value<JToken>("definition").Value<string>("string");
+          var label = item.Value<JToken>("preferredLabel").Value<string>("string");
+          var gemetKeyword = new GemetKeyword(label, def);
+          keywords.Add(gemetKeyword);
+          Keywords.Add(gemetKeyword);
+        }
+
+        CachedKeywords.Add(selectedLanguageCode, keywords);
+      }
+      catch
+      {
+        MessageBox.Show(Properties.Resources.UNABLETO_RETRIEVE_THEME_KEYWORD);
+        return;
+      }
+
+      searchingText.Text = "";
+    }
+
+    private async void ComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+    {
+      var selectedLanguageCode = (string)((ComboBox)sender).SelectedValue;
+
+      // Wait for any current searches to complete
+      while (!string.IsNullOrWhiteSpace(searchingText.Text))
+      {
+        await Task.Delay(1000);
+      }
+
+      await Lookup(selectedLanguageCode);
+    }
+
+    private void OK_Click(object sender, RoutedEventArgs e)
+    {
+      SelectedKeywords = GemetKeywordsList.SelectedItems.Cast<GemetKeyword>().ToList();
+      Close();
+    }
+
+    private void Cancel_Click(object sender, RoutedEventArgs e)
+    {
+      Close();
+    }
+  }
 }

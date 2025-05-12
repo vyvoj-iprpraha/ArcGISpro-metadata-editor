@@ -11,37 +11,37 @@ See the License for the specific language governing permissions and
 limitations under the License.​
 */
 
+using System.Windows;
 using ArcGIS.Desktop.Metadata;
 using ArcGIS.Desktop.Metadata.Editor.Pages;
-using System.Windows;
 
 namespace IPRMetadata.Pages
 {
-    internal class ResourceConstraintsSidebarLabel : ISidebarLabel
+  internal class ResourceConstraintsSidebarLabel : ISidebarLabel
+  {
+    string ISidebarLabel.SidebarLabel
     {
-        string ISidebarLabel.SidebarLabel
-        {
-            get { return ResourceConstraintsSidebarLabel.SidebarLabel; }
-        }
-
-        public static string SidebarLabel
-        {
-            get { return IPRMetadata.Properties.Resources.CFG_LBL_RESOURCECONSTRAINTS; }
-        }
+      get { return ResourceConstraintsSidebarLabel.SidebarLabel; }
     }
-    /// <summary>
-    /// Interaction logic for MTK_ResourceConstraints.xaml
-    /// </summary>
-    internal partial class MTK_ResourceConstraints : EditorPage
+
+    public static string SidebarLabel
     {
-        public MTK_ResourceConstraints()
-        {
-            InitializeComponent();
-        }
-
-        public override string SidebarLabel
-        {
-            get { return ResourceConstraintsSidebarLabel.SidebarLabel; }
-        }
+      get { return IPRMetadata.Properties.Resources.CFG_LBL_RESOURCECONSTRAINTS; }
     }
+  }
+  /// <summary>
+  /// Interaction logic for MTK_ResourceConstraints.xaml
+  /// </summary>
+  internal partial class MTK_ResourceConstraints : EditorPage
+  {
+    public MTK_ResourceConstraints()
+    {
+      InitializeComponent();
+    }
+
+    public override string SidebarLabel
+    {
+      get { return ResourceConstraintsSidebarLabel.SidebarLabel; }
+    }
+  }
 }

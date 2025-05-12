@@ -11,26 +11,27 @@ See the License for the specific language governing permissions and
 limitations under the License.​
 */
 
-using ArcGIS.Desktop.Metadata.Editor.Pages;
 using System;
 using System.Windows.Controls;
 
+using ArcGIS.Desktop.Metadata.Editor.Pages;
+
 namespace IPRMetadata.Pages
 {
-    /// <summary>
-    /// Interaction logic for MTK_MD_FileIdentifier.xaml
-    /// </summary>
-    internal partial class MTK_MD_FileIdentifier : EditorPage
+  /// <summary>
+  /// Interaction logic for MTK_MD_FileIdentifier.xaml
+  /// </summary>
+  internal partial class MTK_MD_FileIdentifier : EditorPage
+  {
+    public MTK_MD_FileIdentifier()
     {
-        public MTK_MD_FileIdentifier()
-        {
-            InitializeComponent();
-        }
-        public void GenerateGuid(object sender, EventArgs e)
-        {
-            var guid = System.Guid.NewGuid().ToString().ToUpper();
-            fileIDField.Text = guid;
-            fileIDField.GetBindingExpression(TextBox.TextProperty).UpdateSource();
-        }
+      InitializeComponent();
     }
+    public void GenerateGuid(object sender, EventArgs e)
+    {
+      var guid = System.Guid.NewGuid().ToString().ToUpper();
+      fileIDField.Text = guid;
+      fileIDField.GetBindingExpression(TextBox.TextProperty).UpdateSource();
+    }
+  }
 }

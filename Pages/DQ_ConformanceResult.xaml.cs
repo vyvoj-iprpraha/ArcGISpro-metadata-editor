@@ -11,19 +11,19 @@ See the License for the specific language governing permissions and
 limitations under the License.​
 */
 
-using ArcGIS.Desktop.Metadata.Editor.Pages;
 using System.Windows.Controls;
+using ArcGIS.Desktop.Metadata.Editor.Pages;
 
 namespace IPRMetadata.Pages
 {
-    /// <summary>
-    /// Interaction logic for MTK_DQ_ConformanceResult.xaml
-    /// </summary>
-    internal partial class MTK_DQ_ConformanceResult : EditorPage
+  /// <summary>
+  /// Interaction logic for MTK_DQ_ConformanceResult.xaml
+  /// </summary>
+  internal partial class MTK_DQ_ConformanceResult : EditorPage
+  {
+    public MTK_DQ_ConformanceResult()
     {
-        public MTK_DQ_ConformanceResult()
-        {
-            InitializeComponent();
-        }
+      InitializeComponent();
     }
+  }
 }

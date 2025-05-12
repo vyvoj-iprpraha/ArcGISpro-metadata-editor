@@ -11,19 +11,20 @@ See the License for the specific language governing permissions and
 limitations under the License.​
 */
 
-using ArcGIS.Desktop.Metadata;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
+using ArcGIS.Desktop.Metadata;
+
 namespace IPRMetadata.Sections
 {
-    internal class Overview : ISidebarLabel
+  internal class Overview : ISidebarLabel
+  {
+    public string SidebarLabel
     {
-        public string SidebarLabel
-        {
-            get { return IPRMetadata.Properties.Resources.CFG_LBL_OVERVIEW; }
-        }
+      get { return IPRMetadata.Properties.Resources.CFG_LBL_OVERVIEW; }
     }
+  }
 }

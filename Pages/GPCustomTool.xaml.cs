@@ -15,14 +15,14 @@ using ArcGIS.Desktop.Metadata.Editor.Pages;
 
 namespace IPRMetadata.Pages
 {
-    /// <summary>
-    /// Interaction logic for MTK_GPCustomTool.xaml
-    /// </summary>
-    internal partial class MTK_GPCustomTool : EditorPage
+  /// <summary>
+  /// Interaction logic for MTK_GPCustomTool.xaml
+  /// </summary>
+  internal partial class MTK_GPCustomTool : EditorPage
+  {
+    public MTK_GPCustomTool()
     {
-        public MTK_GPCustomTool()
-        {
-            InitializeComponent();
-        }
-    }
+      InitializeComponent();
+    }     
+  }   
 }

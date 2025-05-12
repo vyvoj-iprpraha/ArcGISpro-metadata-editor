@@ -11,19 +11,19 @@ See the License for the specific language governing permissions and
 limitations under the License.​
 */
 
-using ArcGIS.Desktop.Metadata.Editor.Pages;
 using System.Windows.Controls;
+using ArcGIS.Desktop.Metadata.Editor.Pages;
 
 namespace IPRMetadata.Pages
 {
-    /// <summary>
-    /// Interaction logic for MTK_MD_ReferenceSystem.xaml
-    /// </summary>
-    internal partial class MTK_MD_ReferenceSystem : EditorPage
+  /// <summary>
+  /// Interaction logic for MTK_MD_ReferenceSystem.xaml
+  /// </summary>
+  internal partial class MTK_MD_ReferenceSystem : EditorPage
+  {
+    public MTK_MD_ReferenceSystem()
     {
-        public MTK_MD_ReferenceSystem()
-        {
-            InitializeComponent();
-        }
+      InitializeComponent();
     }
+  }
 }

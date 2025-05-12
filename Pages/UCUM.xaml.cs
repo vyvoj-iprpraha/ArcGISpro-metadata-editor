@@ -15,14 +15,14 @@ using ArcGIS.Desktop.Metadata.Editor.Pages;
 
 namespace IPRMetadata.Pages
 {
-    /// <summary>
-    /// Interaction logic for MTK_UCUM.xaml
-    /// </summary>
-    internal partial class MTK_UCUM : EditorPage
+  /// <summary>
+  /// Interaction logic for MTK_UCUM.xaml
+  /// </summary>
+  internal partial class MTK_UCUM : EditorPage
+  {
+    public MTK_UCUM()
     {
-        public MTK_UCUM()
-        {
-            InitializeComponent();
-        }
+      InitializeComponent();
     }
+  }
 }

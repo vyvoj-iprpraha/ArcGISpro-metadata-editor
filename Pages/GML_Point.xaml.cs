@@ -15,14 +15,14 @@ using ArcGIS.Desktop.Metadata.Editor.Pages;
 
 namespace IPRMetadata.Pages
 {
-    /// <summary>
-    /// Interaction logic for MTK_GML_Point.xaml
-    /// </summary>
-    internal partial class MTK_GML_Point : EditorPage
+  /// <summary>
+  /// Interaction logic for MTK_GML_Point.xaml
+  /// </summary>
+  internal partial class MTK_GML_Point : EditorPage
+  {
+    public MTK_GML_Point()
     {
-        public MTK_GML_Point()
-        {
-            InitializeComponent();
-        }
+      InitializeComponent();
     }
+  }
 }

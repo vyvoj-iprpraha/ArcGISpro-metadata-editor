@@ -11,19 +11,19 @@ See the License for the specific language governing permissions and
 limitations under the License.​
 */
 
-using ArcGIS.Desktop.Metadata.Editor.Pages;
 using System.Windows.Controls;
+using ArcGIS.Desktop.Metadata.Editor.Pages;
 
 namespace IPRMetadata.Pages
 {
-    /// <summary>
-    /// Interaction logic for MTK_MD_ScopeDescription.xaml
-    /// </summary>
-    internal partial class MTK_MD_ScopeDescription : EditorPage
+  /// <summary>
+  /// Interaction logic for MTK_MD_ScopeDescription.xaml
+  /// </summary>
+  internal partial class MTK_MD_ScopeDescription : EditorPage
+  {
+    public MTK_MD_ScopeDescription()
     {
-        public MTK_MD_ScopeDescription()
-        {
-            InitializeComponent();
-        }
+      InitializeComponent();
     }
+  }
 }

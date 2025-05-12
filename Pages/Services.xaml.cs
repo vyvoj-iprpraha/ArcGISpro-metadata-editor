@@ -16,31 +16,31 @@ using ArcGIS.Desktop.Metadata.Editor.Pages;
 
 namespace IPRMetadata.Pages
 {
-    internal class ServicesSidebarLabel : ISidebarLabel
+  internal class ServicesSidebarLabel : ISidebarLabel
+  {
+    string ISidebarLabel.SidebarLabel
     {
-        string ISidebarLabel.SidebarLabel
-        {
-            get { return ServicesSidebarLabel.SidebarLabel; }
-        }
-
-        public static string SidebarLabel
-        {
-            get { return IPRMetadata.Properties.Resources.CFG_LBL_SERVICES; }
-        }
+      get { return ServicesSidebarLabel.SidebarLabel; }
     }
-    /// <summary>
-    /// Interaction logic for MTK_Services.xaml
-    /// </summary>
-    internal partial class MTK_Services : EditorPage
+
+    public static string SidebarLabel
     {
-        public MTK_Services()
-        {
-            InitializeComponent();
-        }
-
-        public override string SidebarLabel
-        {
-            get { return ServicesSidebarLabel.SidebarLabel; }
-        }
+      get { return IPRMetadata.Properties.Resources.CFG_LBL_SERVICES; }
     }
+  }
+  /// <summary>
+  /// Interaction logic for MTK_Services.xaml
+  /// </summary>
+  internal partial class MTK_Services : EditorPage
+  {
+    public MTK_Services()
+    {
+      InitializeComponent();
+    }
+
+    public override string SidebarLabel
+    {
+      get { return ServicesSidebarLabel.SidebarLabel; }
+    }
+  }
 }

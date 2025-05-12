@@ -11,19 +11,19 @@ See the License for the specific language governing permissions and
 limitations under the License.​
 */
 
-using ArcGIS.Desktop.Metadata.Editor.Pages;
 using System.Windows.Controls;
+using ArcGIS.Desktop.Metadata.Editor.Pages;
 
 namespace IPRMetadata.Pages
 {
-    /// <summary>
-    /// Interaction logic for MTK_EX_VerticalExtent.xaml
-    /// </summary>
-    internal partial class MTK_EX_VerticalExtent : EditorPage
+  /// <summary>
+  /// Interaction logic for MTK_EX_VerticalExtent.xaml
+  /// </summary>
+  internal partial class MTK_EX_VerticalExtent : EditorPage
+  {
+    public MTK_EX_VerticalExtent()
     {
-        public MTK_EX_VerticalExtent()
-        {
-            InitializeComponent();
-        }
+      InitializeComponent();
     }
+  }
 }

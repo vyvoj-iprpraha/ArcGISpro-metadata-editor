@@ -16,30 +16,29 @@ using ArcGIS.Desktop.Metadata.Editor.Pages;
 
 namespace IPRMetadata.Pages
 {
-    internal class DatasetCitationSidebarLabel : ISidebarLabel
+  internal class DatasetCitationSidebarLabel : ISidebarLabel
+  {
+    string ISidebarLabel.SidebarLabel
     {
-        string ISidebarLabel.SidebarLabel
-        {
-            get { return DatasetCitationSidebarLabel.SidebarLabel; }
-        }
-        public static string SidebarLabel
-        {
-            get { return IPRMetadata.Properties.Resources.CFG_LBL_DATASETCITATION; }
-        }
+      get { return DatasetCitationSidebarLabel.SidebarLabel; }
     }
-    /// <summary>
-    /// Interaction logic for MTK_DatasetCitation.xaml
-    /// </summary>
-    internal partial class MTK_DatasetCitation : EditorPage
+    public static string SidebarLabel
     {
-        public MTK_DatasetCitation()
-        {
-            InitializeComponent();
-        }
+      get { return IPRMetadata.Properties.Resources.CFG_LBL_DATASETCITATION; }
+    }}
+  /// <summary>
+  /// Interaction logic for MTK_DatasetCitation.xaml
+  /// </summary>
+  internal partial class MTK_DatasetCitation : EditorPage
+  {
+    public MTK_DatasetCitation()
+    {
+      InitializeComponent();
+    }
 
-        public override string SidebarLabel
-        {
-            get { return DatasetCitationSidebarLabel.SidebarLabel; }
-        }
+    public override string SidebarLabel
+    {
+      get { return DatasetCitationSidebarLabel.SidebarLabel; }
     }
+  }
 }

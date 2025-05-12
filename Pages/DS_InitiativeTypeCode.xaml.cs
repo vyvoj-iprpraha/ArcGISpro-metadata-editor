@@ -11,19 +11,19 @@ See the License for the specific language governing permissions and
 limitations under the License.​
 */
 
-using ArcGIS.Desktop.Metadata.Editor.Pages;
 using System.Windows.Controls;
+using ArcGIS.Desktop.Metadata.Editor.Pages;
 
 namespace IPRMetadata.Pages
 {
-    /// <summary>
-    /// Interaction logic for MTK_DS_InitiativeTypeCode.xaml
-    /// </summary>
-    internal partial class MTK_DS_InitiativeTypeCode : EditorPage
+  /// <summary>
+  /// Interaction logic for MTK_DS_InitiativeTypeCode.xaml
+  /// </summary>
+  internal partial class MTK_DS_InitiativeTypeCode : EditorPage
+  {
+    public MTK_DS_InitiativeTypeCode()
     {
-        public MTK_DS_InitiativeTypeCode()
-        {
-            InitializeComponent();
-        }
+      InitializeComponent();
     }
+  }
 }

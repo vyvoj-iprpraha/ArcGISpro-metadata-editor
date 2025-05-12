@@ -15,14 +15,14 @@ using ArcGIS.Desktop.Metadata.Editor.Pages;
 
 namespace IPRMetadata.Pages
 {
-    /// <summary>
-    /// Interaction logic for MTK_TM_Period.xaml
-    /// </summary>
-    internal partial class MTK_TM_Period : EditorPage
+  /// <summary>
+  /// Interaction logic for MTK_TM_Period.xaml
+  /// </summary>
+  internal partial class MTK_TM_Period : EditorPage
+  {
+    public MTK_TM_Period()
     {
-        public MTK_TM_Period()
-        {
-            InitializeComponent();
-        }
+      InitializeComponent();
     }
+  }
 }

@@ -11,79 +11,79 @@ See the License for the specific language governing permissions and
 limitations under the License.​
 */
 
-using ArcGIS.Desktop.Metadata.Editor.Pages;
 using System.Collections.Generic;
 using System.Xml;
+using ArcGIS.Desktop.Metadata.Editor.Pages;
 
 namespace IPRMetadata.Pages
 {
-    /// <summary>
-    /// Interaction logic for MTK_CI_Contact.xaml
-    /// </summary>
-    internal partial class MTK_CI_Contact : EditorPage
+  /// <summary>
+  /// Interaction logic for MTK_CI_Contact.xaml
+  /// </summary>
+  internal partial class MTK_CI_Contact : EditorPage
+  {
+    public MTK_CI_Contact()
     {
-        public MTK_CI_Contact()
-        {
-            InitializeComponent();
-        }
-
-        public override string DefaultValue
-        {
-            get
-            {
-                IEnumerable<XmlNode> data = GetXmlDataContext();
-                if (null == data)
-                    return null;
-
-                foreach (XmlNode root in data)
-                {
-                    // URL
-                    //XmlNode node = root.SelectSingleNode("cntOnlineRes/linkage");
-                    //if (null != node && 0 < node.InnerText.Length)
-                    //{
-                    //    return node.InnerText;
-                    //}
-
-                    // EMAIL
-                    XmlNode node = root.SelectSingleNode("cntAddress/eMailAdd");
-                    if (null != node && 0 < node.InnerText.Length)
-                    {
-                        return node.InnerText;
-                    }
-
-                    // ADDRESS
-                    string address = "";
-                    node = root.SelectSingleNode("cntAddress/delPoint");
-                    if (null != node && 0 < node.InnerText.Length)
-                    {
-                        address += node.InnerText;
-                        address += " ";
-                    }
-                    node = root.SelectSingleNode("cntAddress/city");
-                    if (null != node && 0 < node.InnerText.Length)
-                    {
-                        address += node.InnerText;
-                        address += ", ";
-                    }
-                    node = root.SelectSingleNode("cntAddress/adminArea");
-                    if (null != node && 0 < node.InnerText.Length)
-                    {
-                        address += node.InnerText;
-                        //address += " ";
-                    }
-
-                    if (0 < address.Length)
-                        return address;
-
-                    break;
-                }
-
-                return null;
-            }
-            set
-            {
-                // DO NOTHING
-            }
-        }
+      InitializeComponent();
     }
+
+    public override string DefaultValue
+    {
+      get
+      {
+        IEnumerable<XmlNode> data = GetXmlDataContext();
+        if (null == data)
+          return null;
+
+        foreach (XmlNode root in data)
+        {
+          // URL
+          //XmlNode node = root.SelectSingleNode("cntOnlineRes/linkage");
+          //if (null != node && 0 < node.InnerText.Length)
+          //{
+          //    return node.InnerText;
+          //}
+
+          // EMAIL
+          XmlNode node = root.SelectSingleNode("cntAddress/eMailAdd");
+          if (null != node && 0 < node.InnerText.Length)
+          {
+            return node.InnerText;
+          }
+
+          // ADDRESS
+          string address = "";
+          node = root.SelectSingleNode("cntAddress/delPoint");
+          if (null != node && 0 < node.InnerText.Length)
+          {
+            address += node.InnerText;
+            address += " ";
+          }
+          node = root.SelectSingleNode("cntAddress/city");
+          if (null != node && 0 < node.InnerText.Length)
+          {
+            address += node.InnerText;
+            address += ", ";
+          }
+          node = root.SelectSingleNode("cntAddress/adminArea");
+          if (null != node && 0 < node.InnerText.Length)
+          {
+            address += node.InnerText;
+            //address += " ";
+          }
+
+          if (0 < address.Length)
+            return address;
+
+          break;
+        }
+
+        return null;
+      }
+      set
+      {
+        // DO NOTHING
+      }
+    }
+  }
 }

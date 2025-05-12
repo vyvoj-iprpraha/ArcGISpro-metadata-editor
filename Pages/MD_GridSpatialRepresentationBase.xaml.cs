@@ -15,14 +15,14 @@ using ArcGIS.Desktop.Metadata.Editor.Pages;
 
 namespace IPRMetadata.Pages
 {
-    /// <summary>
-    /// Interaction logic for MTK_MD_GridSpatialRepresentationBase.xaml
-    /// </summary>
-    internal partial class MTK_MD_GridSpatialRepresentationBase : EditorPage
+  /// <summary>
+  /// Interaction logic for MTK_MD_GridSpatialRepresentationBase.xaml
+  /// </summary>
+  internal partial class MTK_MD_GridSpatialRepresentationBase : EditorPage
+  {
+    public MTK_MD_GridSpatialRepresentationBase()
     {
-        public MTK_MD_GridSpatialRepresentationBase()
-        {
-            InitializeComponent();
-        }
+      InitializeComponent();
     }
+  }
 }

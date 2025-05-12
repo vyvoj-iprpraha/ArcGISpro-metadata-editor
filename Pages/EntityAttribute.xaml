@@ -75,7 +75,6 @@ limitations under the License.​
     <XmlDataProvider x:Key="XmlRecord" XPath="/" IsAsynchronous="False" IsInitialLoadEnabled="True">
       <x:XData>
         <ANY xmlns="">
-          
           <verejne></verejne>
           <attrlabl></attrlabl>
           <attalias></attalias>
@@ -206,14 +205,16 @@ limitations under the License.​
         <!ELEMENT attrvae (#PCDATA)>
         <!ELEMENT attrmfrq (#PCDATA)>       
         -->
-        <!--************************************************************************************************************************************-->
+
+        <!--************************************************************************************************-->
         <!-- Publish check box -->
         <t:MTK_BooleanValueSync Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2"
             SyncedElement="verejne"
             Label="{x:Static r:Resources.PUBLISH_ATTRIBUTE}"
             ToolTip="{x:Static r:Definitions.PUBLISH_ATTRIBUTE}" />
-        <!--************************************************************************************************************************************-->
-        <!-- Attribute Label -->
+         <!--**************************************************************************************************-->
+
+                <!-- Attribute Label -->
         <Label Style="{DynamicResource EditorHLabelStyle}" Grid.Row="1" Grid.Column="0" Content="{x:Static r:Resources.LBL_EAINFO_ATTRLABL}"/>
         <TextBox Style="{DynamicResource EditorTextBoxStyle}" Grid.Row="1" Grid.Column="1" 
             ToolTip="{x:Static r:Definitions.FGDC_EntityAndAttribute_attrlabl}"
@@ -278,7 +279,7 @@ limitations under the License.​
 
         <!-- Attribute Indexed -->
         <Label Style="{DynamicResource EditorHLabelStyle}" Grid.Row="9" Grid.Column="0" Content="{x:Static r:Resources.LBL_EAINFO_ATINDEX}"/>
-        <TextBox Grid.Row="9" Grid.Column="1" ToolTip="{x:Static r:Definitions.FGDC_EntityAndAttribute_atindex}" Style="{DynamicResource EditorTextBoxStyle}"
+        <TextBox Grid.Row="8" Grid.Column="1" ToolTip="{x:Static r:Definitions.FGDC_EntityAndAttribute_atindex}" Style="{DynamicResource EditorTextBoxStyle}"
             Text="{e:MetadataBinding XPath=atindex}"
             Name="FGDC_EntityAndAttribute_atindex"/>
 
@@ -291,7 +292,7 @@ limitations under the License.​
 
         <!-- Attribute Value Accuracy Explanation -->
         <Label Style="{DynamicResource EditorHLabelStyle}" Grid.Row="10" Grid.Column="0" Content="{x:Static r:Resources.LBL_EAINFO_ATTRVAE}"/>
-        <TextBox Grid.Row="10" Grid.Column="1" Style="{DynamicResource EditorTextBoxStyle}"
+        <TextBox Grid.Row="9" Grid.Column="1" Style="{DynamicResource EditorTextBoxStyle}"
             ToolTip="{x:Static r:Definitions.FGDC_EntityAndAttribute_attrva}"
             v:Nav.AnchorName="attrva,attrvai/attrva"
             Text="{e:MetadataBinding XPath=attrvai/attrva}"
@@ -299,7 +300,7 @@ limitations under the License.​
 
         <!-- Attribute Value Accuracy  -->
         <Label Style="{DynamicResource EditorHLabelStyle}" Grid.Row="11" Grid.Column="0" Content="{x:Static r:Resources.LBL_EAINFO_ATTRVA}"/>
-        <TextBox Grid.Row="11" Grid.Column="1" Style="{DynamicResource EditorTextBoxStyle}" 
+        <TextBox Grid.Row="10" Grid.Column="1" Style="{DynamicResource EditorTextBoxStyle}" 
             ToolTip="{x:Static r:Definitions.FGDC_EntityAndAttribute_attrvae}"
             v:MetadataRules.Rules="{StaticResource attrvae}"
             Text="{e:MetadataBinding XPath=attrvai/attrvae}"
@@ -307,7 +308,7 @@ limitations under the License.​
 
         <!-- Attribute Value Measurement Frequency -->
         <Label Style="{DynamicResource EditorHLabelStyle}" Grid.Row="12" Grid.Column="0" Content="{x:Static r:Resources.LBL_EAINFO_ATTRMFRQ}"/>
-        <ComboBox Grid.Row="12" Grid.Column="1" Loaded="PostProcessComboBoxValues" p:EditorPage.SourceXPath="attrmfrq" Style="{DynamicResource EditorHComboBoxStyle}" IsEditable="False"
+        <ComboBox Grid.Row="11" Grid.Column="1" Loaded="PostProcessComboBoxValues" p:EditorPage.SourceXPath="attrmfrq" Style="{DynamicResource EditorHComboBoxStyle}" IsEditable="False"
             ToolTip="{x:Static r:Definitions.FGDC_EntityAndAttribute_attrmfrq}"
             ItemsSource="{Binding Source={StaticResource MD_MaintenanceFrequenceCode}, Path=List}"
             DisplayMemberPath="."
@@ -323,14 +324,14 @@ limitations under the License.​
         <!-- beginning date of attribute values -->
         <Label Style="{DynamicResource EditorHLabelStyle}" Grid.Row="13" Grid.Column="0" ToolTip=""
             Content="{x:Static r:Resources.LBL_EAINFO_BEGDATEA}"/>
-        <controls:DateTimeControl Grid.Row="13" Grid.Column="1"
+        <controls:DateTimeControl Grid.Row="12" Grid.Column="1"
             ToolTip="{x:Static r:Definitions.FGDC_EntityAndAttribute_begdatea}"
             Items="{Binding XPath=begdatea}"/>
 
         <!-- ending date of attribute values -->
         <Label Style="{DynamicResource EditorHLabelStyle}" Grid.Row="14" Grid.Column="0" ToolTip=""
             Content="{x:Static r:Resources.LBL_EAINFO_ENDDATEA}"/>
-        <controls:DateTimeControl Grid.Row="14" Grid.Column="1"
+        <controls:DateTimeControl Grid.Row="13" Grid.Column="1"
             ToolTip="{x:Static r:Definitions.FGDC_EntityAndAttribute_enddatea}"
             Items="{Binding XPath=enddatea}"/>
 
@@ -359,7 +360,7 @@ limitations under the License.​
                               Mode=OneWayToSource}" LastChildFill="True">
                             <Button DockPanel.Dock="Right" Click="DeleteItem" Tag="deleteParent" Style="{DynamicResource DeleteButton}"
                                     Name="EntityAttribute_EnumeratedDomainDelete">
-                              <Image Style="{DynamicResource DeleteImageStyle}" Source="pack://application:,,,/ArcGIS.Desktop.Resources;component/Images/GenericDeleteRed16.png"/>
+                              <Image Style="{DynamicResource DeleteImageStyle}" Source="{DynamicResource GenericDeleteRed16}"/>
                             </Button>
                             <Label Style="{DynamicResource EditorHExpanderLabel}"  Content="{x:Static r:Resources.LBL_EAINFO_ENUM_DOMAIN}"/>
                           </DockPanel>
@@ -376,7 +377,7 @@ limitations under the License.​
                           <Button Tag="EnumDomValueInside_Parent" Click="AddRecordByTagToLocal" Style="{DynamicResource AddButton}"
                                   Name="EntityAttribute_EnumeratedDomainAdd">
                             <StackPanel VerticalAlignment="Center" Orientation="Horizontal">
-                              <Image Style="{DynamicResource AddImageStyle}" Source="pack://application:,,,/ArcGIS.Desktop.Resources;component/Images/GenericAddGreen16.png"/>
+                              <Image Style="{DynamicResource AddImageStyle}" Source="{DynamicResource GenericAddGreen16}"/>
                               <TextBlock Style="{DynamicResource ButtonTextStyle}" Text="{x:Static r:Resources.BTN_EAINFO_NEW_ENUM_DOMAIN}"/>
                             </StackPanel>
                           </Button>
@@ -399,7 +400,7 @@ limitations under the License.​
             <Button Tag="EnumDomValue" Click="AddRecordByTagToLocal" Style="{DynamicResource AddButton}"
                     Name="EntityAttribute_EnumeratedDomainAdd">
               <StackPanel VerticalAlignment="Center" Orientation="Horizontal">
-                <Image Style="{DynamicResource AddImageStyle}" Source="pack://application:,,,/ArcGIS.Desktop.Resources;component/Images/GenericAddGreen16.png"/>
+                <Image Style="{DynamicResource AddImageStyle}" Source="{DynamicResource GenericAddGreen16}"/>
                 <TextBlock Style="{DynamicResource ButtonTextStyle}" Text="{x:Static r:Resources.BTN_EAINFO_NEW_ENUM_DOMAIN}"/>
               </StackPanel>
             </Button>
@@ -426,7 +427,7 @@ limitations under the License.​
                         Mode=OneWayToSource}" LastChildFill="True">
                     <Button DockPanel.Dock="Right" Click="DeleteItem" Tag="deleteParent" Style="{DynamicResource DeleteButton}"
                             Name="EntityAttribute_RangeDomainDelete">
-                      <Image Style="{DynamicResource DeleteImageStyle}" Source="pack://application:,,,/ArcGIS.Desktop.Resources;component/Images/GenericDeleteRed16.png"/>
+                      <Image Style="{DynamicResource DeleteImageStyle}" Source="{DynamicResource GenericDeleteRed16}"/>
                     </Button>
                     <Label Style="{DynamicResource EditorHExpanderLabel}"  Content="{x:Static r:Resources.LBL_EAINFO_RANGE_DOMAIN}"/>
                   </DockPanel>
@@ -444,7 +445,7 @@ limitations under the License.​
       <Button Tag="RangeDomain" Click="AddRecordByTagToLocal" Style="{DynamicResource AddButton}"
               Name="EntityAttribute_RangeDomainAdd">
         <StackPanel VerticalAlignment="Center" Orientation="Horizontal">
-          <Image Style="{DynamicResource AddImageStyle}" Source="pack://application:,,,/ArcGIS.Desktop.Resources;component/Images/GenericAddGreen16.png"/>
+          <Image Style="{DynamicResource AddImageStyle}" Source="{DynamicResource GenericAddGreen16}"/>
           <TextBlock Style="{DynamicResource ButtonTextStyle}" Text="{x:Static r:Resources.BTN_EAINFO_NEW_RANGE}"/>
         </StackPanel>
       </Button>
@@ -468,7 +469,7 @@ limitations under the License.​
                         Mode=OneWayToSource}" LastChildFill="True">
                     <Button DockPanel.Dock="Right" Click="DeleteItem" Tag="deleteParent" Style="{DynamicResource DeleteButton}"
                             Name="EntityAttribute_CodesetDomainDelete">
-                      <Image Style="{DynamicResource DeleteImageStyle}" Source="pack://application:,,,/ArcGIS.Desktop.Resources;component/Images/GenericDeleteRed16.png"/>
+                      <Image Style="{DynamicResource DeleteImageStyle}" Source="{DynamicResource GenericDeleteRed16}"/>
                     </Button>
                     <Label Style="{DynamicResource EditorHExpanderLabel}"  Content="{x:Static r:Resources.LBL_EAINFO_CODESET}"/>
                   </DockPanel>
@@ -486,7 +487,7 @@ limitations under the License.​
       <Button Tag="CodesetDomain" Click="AddRecordByTagToLocal" Style="{DynamicResource AddButton}"
               Name="EntityAttribute_CodesetDomainAdd">
         <StackPanel VerticalAlignment="Center" Orientation="Horizontal">
-          <Image Style="{DynamicResource AddImageStyle}" Source="pack://application:,,,/ArcGIS.Desktop.Resources;component/Images/GenericAddGreen16.png"/>
+          <Image Style="{DynamicResource AddImageStyle}" Source="{DynamicResource GenericAddGreen16}"/>
           <TextBlock Style="{DynamicResource ButtonTextStyle}" Text="{x:Static r:Resources.BTN_EAINFO_NEW_CODESET}"/>
         </StackPanel>
       </Button>
@@ -518,7 +519,7 @@ limitations under the License.​
           ToolTip="{x:Static r:Definitions.FGDC_EntityAndAttribute_udom}"
           Name="EntityAttribute_UnpresentableDomainAdd">
         <StackPanel VerticalAlignment="Center" Orientation="Horizontal">
-          <Image Style="{DynamicResource AddImageStyle}" Source="pack://application:,,,/ArcGIS.Desktop.Resources;component/Images/GenericAddGreen16.png"/>
+          <Image Style="{DynamicResource AddImageStyle}" Source="{DynamicResource GenericAddGreen16}"/>
           <TextBlock Style="{DynamicResource ButtonTextStyle}" Text="{x:Static r:Resources.BTN_EAINFO_NEW_UDOM}"/>
         </StackPanel>
       </Button>

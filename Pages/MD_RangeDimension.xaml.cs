@@ -11,19 +11,19 @@ See the License for the specific language governing permissions and
 limitations under the License.​
 */
 
-using ArcGIS.Desktop.Metadata.Editor.Pages;
 using System.Windows.Controls;
+using ArcGIS.Desktop.Metadata.Editor.Pages;
 
 namespace IPRMetadata.Pages
 {
-    /// <summary>
-    /// Interaction logic for MD_RangeDimension.xaml
-    /// </summary>
-    internal partial class MTK_MD_RangeDimension : EditorPage
+  /// <summary>
+  /// Interaction logic for MD_RangeDimension.xaml
+  /// </summary>
+  internal partial class MTK_MD_RangeDimension : EditorPage
+  {
+    public MTK_MD_RangeDimension()
     {
-        public MTK_MD_RangeDimension()
-        {
-            InitializeComponent();
-        }
+      InitializeComponent();
     }
+  }
 }

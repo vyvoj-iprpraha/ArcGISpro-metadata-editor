@@ -11,19 +11,19 @@ See the License for the specific language governing permissions and
 limitations under the License.​
 */
 
-using ArcGIS.Desktop.Metadata.Editor.Pages;
 using System.Windows.Controls;
+using ArcGIS.Desktop.Metadata.Editor.Pages;
 
 namespace IPRMetadata.Pages
 {
-    /// <summary>
-    /// Interaction logic for MD_CharacterSetCode.xaml
-    /// </summary>
-    internal partial class MTK_MD_CharacterSetCode : EditorPage
+  /// <summary>
+  /// Interaction logic for MD_CharacterSetCode.xaml
+  /// </summary>
+  internal partial class MTK_MD_CharacterSetCode : EditorPage
+  {
+    public MTK_MD_CharacterSetCode()
     {
-        public MTK_MD_CharacterSetCode()
-        {
-            InitializeComponent();
-        }
+      InitializeComponent();
     }
+  }
 }

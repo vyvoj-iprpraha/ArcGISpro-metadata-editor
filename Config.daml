@@ -17,13 +17,13 @@ limitations under the License.​
         xmlns="http://schemas.esri.com/DADF/Registry" 
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
         xsi:schemaLocation="http://schemas.esri.com/DADF/Registry file:///C:/esrri/ArcGIS/Pro/bin/ArcGIS.Desktop.Framework.xsd">
-  <AddInInfo id="{955665cc-d993-499c-89f8-9144e29eae16}" version="1.0" desktopVersion="3.0.36056">
+  <AddInInfo id="{955665cc-d993-499c-89f8-9144e29eae16}" version="2.0" desktopVersion="3.3.0">
     <Name>IPRMetadata</Name>
     <Description>IPRMetadata Toolkit</Description>
     <Image>Images\AddinDesktop32.png</Image>
     <Author>spal</Author>
     <Company>Acme</Company>
-    <Date>1/27/2023 9:09:08 AM, 2023</Date>
+    <Date>3/24/2025 9:09:08 AM, 2023</Date>
     <Subject>Content</Subject>
   </AddInInfo>
   <categories>
@@ -34,8 +34,8 @@ limitations under the License.​
             <validationNamespaceURI>http://www.isotc211.org/2005/gmd</validationNamespaceURI>
             <validationSchemaURL>http://www.isotc211.org/schemas/2005/gmd/metadataEntity.xsd</validationSchemaURL>
             <tranformStyle>
-				<importStyle>[cesta_k_souboru]\CustomStylesheets\ISO19139_2ArcGIS_CustomImporter.xslt</importStyle>
-				<exportStyle>[cesta_k_souboru]\CustomStylesheets\CustomExporterForMetadataTransfer.xslt</exportStyle>
+				<importStyle>C:\Users\spal\source\repos\upgrade\IPRMetadata\CustomStylesheets\ISO19139_2ArcGIS_CustomImporter.xslt</importStyle>
+				<exportStyle>C:\Users\spal\source\repos\upgrade\IPRMetadata\CustomStylesheets\CustomExporterForMetadataTransfer.xslt</exportStyle>
 			</tranformStyle>
             <viewerXslt>Metadata\Stylesheets\XML.xsl</viewerXslt>
             <editor>

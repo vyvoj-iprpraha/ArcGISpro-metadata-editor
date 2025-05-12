@@ -15,14 +15,14 @@ using ArcGIS.Desktop.Metadata.Editor.Pages;
 
 namespace IPRMetadata.Pages
 {
-    /// <summary>
-    /// Interaction logic for MTK_MD_Georectified.xaml
-    /// </summary>
-    internal partial class MTK_MD_Georectified : EditorPage
+  /// <summary>
+  /// Interaction logic for MTK_MD_Georectified.xaml
+  /// </summary>
+  internal partial class MTK_MD_Georectified : EditorPage
+  {
+    public MTK_MD_Georectified()
     {
-        public MTK_MD_Georectified()
-        {
-            InitializeComponent();
-        }
+      InitializeComponent();
     }
+  }
 }

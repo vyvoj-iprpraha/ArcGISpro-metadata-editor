@@ -15,27 +15,27 @@ using ArcGIS.Desktop.Metadata.Editor.Pages;
 
 namespace IPRMetadata.Pages
 {
-    /// <summary>
-    /// Interaction logic for CI_ResponsibleParty.xaml
-    /// </summary>
-    internal partial class MTK_CI_ResponsibleParty : EditorPage
+  /// <summary>
+  /// Interaction logic for CI_ResponsibleParty.xaml
+  /// </summary>
+  internal partial class MTK_CI_ResponsibleParty : EditorPage
+  {
+    public MTK_CI_ResponsibleParty()
     {
-        public MTK_CI_ResponsibleParty()
-        {
-            InitializeComponent();
-        }
-
-        public override string DefaultValue
-        {
-            get
-            {
-                return Utils.Utils.ExtractResponsiblePartyLabel(this, IPRMetadata.Properties.Resources.LBL_CI_PARTY_FORMAT);
-            }
-
-            set
-            {
-                // NOOP
-            }
-        }
+      InitializeComponent();
     }
+
+    public override string DefaultValue
+    {
+      get
+      {
+        return Utils.Utils.ExtractResponsiblePartyLabel(this, Utils.Utils.LBL_CI_PARTY_FORMAT);
+      }
+
+      set
+      {
+        // NOOP
+      }
+    }
+  }
 }

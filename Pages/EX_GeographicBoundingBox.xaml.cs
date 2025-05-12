@@ -11,78 +11,79 @@ See the License for the specific language governing permissions and
 limitations under the License.​
 */
 
-using ArcGIS.Desktop.Metadata.Editor.Pages;
 using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Xml;
 
+using ArcGIS.Desktop.Metadata.Editor.Pages;
+
 namespace IPRMetadata.Pages
 {
-    /// <summary>
-    /// Interaction logic for MTK_EX_GeographicBoundingBox.xaml
-    /// </summary>
-    internal partial class MTK_EX_GeographicBoundingBox : EditorPage
+  /// <summary>
+  /// Interaction logic for MTK_EX_GeographicBoundingBox.xaml
+  /// </summary>
+  internal partial class MTK_EX_GeographicBoundingBox : EditorPage
+  {
+    public MTK_EX_GeographicBoundingBox()
     {
-        public MTK_EX_GeographicBoundingBox()
-        {
-            InitializeComponent();
-        }
-
-        public override string DefaultValue
-        {
-            get
-            {
-                IEnumerable<XmlNode> data = GetXmlDataContext();
-                if (null == data)
-                    return String.Empty;
-
-                StringBuilder sb = new StringBuilder();
-                foreach (XmlNode root in data)
-                {
-                    // west
-                    XmlNode node = root.SelectSingleNode("GeoBndBox/westBL");
-                    if (null != node && 0 < node.InnerText.Length)
-                    {
-                        sb.Append(node.InnerText);
-                        sb.Append(", ");
-                    }
-
-                    // east
-                    node = root.SelectSingleNode("GeoBndBox/eastBL");
-                    if (null != node && 0 < node.InnerText.Length)
-                    {
-                        sb.Append(node.InnerText);
-                        sb.Append(", ");
-                    }
-
-                    // south
-                    node = root.SelectSingleNode("GeoBndBox/southBL");
-                    if (null != node && 0 < node.InnerText.Length)
-                    {
-                        sb.Append(node.InnerText);
-                        sb.Append(", ");
-                    }
-
-                    // north
-                    node = root.SelectSingleNode("GeoBndBox/northBL");
-                    if (null != node && 0 < node.InnerText.Length)
-                    {
-                        sb.Append(node.InnerText);
-                        sb.Append(", ");
-                    }
-                    break;
-                }
-
-                if (0 < sb.Length)
-                    return IPRMetadata.Properties.Resources.LBL_EXTENTS_BBOX + sb.ToString().Substring(0, 30) + "...";
-                else
-                    return String.Empty; // Properties.Resources.LBL_EXTENTS_BBOX_EMPTY;
-            }
-            set
-            {
-                // NOOP
-            }
-        }
+      InitializeComponent();
     }
+
+    public override string DefaultValue
+    {
+      get
+      {
+        IEnumerable<XmlNode> data = GetXmlDataContext();
+        if (null == data)
+          return String.Empty;
+
+        StringBuilder sb = new StringBuilder();
+        foreach (XmlNode root in data)
+        {
+          // west
+          XmlNode node = root.SelectSingleNode("GeoBndBox/westBL");
+          if (null != node && 0 < node.InnerText.Length)
+          {
+            sb.Append(node.InnerText);
+            sb.Append(", ");
+          }
+
+          // east
+          node = root.SelectSingleNode("GeoBndBox/eastBL");
+          if (null != node && 0 < node.InnerText.Length)
+          {
+            sb.Append(node.InnerText);
+            sb.Append(", ");
+          }
+
+          // south
+          node = root.SelectSingleNode("GeoBndBox/southBL");
+          if (null != node && 0 < node.InnerText.Length)
+          {
+            sb.Append(node.InnerText);
+            sb.Append(", ");
+          }
+
+          // north
+          node = root.SelectSingleNode("GeoBndBox/northBL");
+          if (null != node && 0 < node.InnerText.Length)
+          {
+            sb.Append(node.InnerText);
+            sb.Append(", ");
+          }
+          break;
+        }
+
+        if (0 < sb.Length)
+          return IPRMetadata.Properties.Resources.LBL_EXTENTS_BBOX + sb.ToString().Substring(0, 30) + "...";
+        else
+          return String.Empty; // Properties.Resources.LBL_EXTENTS_BBOX_EMPTY;
+      }
+      set
+      {
+        // NOOP
+      }
+    }
+  }
 }
