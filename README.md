@@ -9,7 +9,7 @@ Repozitár obsahuje zdrojový kód úprav ArcGIS PRO metadatového editoru. Zdro
 - Overview>Topics&Kewords>Téma INSPIRE(INSPIREstatus) - jednoduché select menu
 - Overview>Topics&Kewords>Téma IPR(IPSstatus) - jednoduché select menu
 - Overview>Topics&Kewords>Jev ÚAP 2020(UAPstatus) - jednoduché select menu
-- - Overview>Topics&Kewords>Jev ÚAP(UAP2024status) - jednoduché select menu
+- Overview>Topics&Kewords>Jev ÚAP(UAP2024status) - jednoduché select menu
 - Overview>Topics&Kewords>Klíčové slovo IPR(IPRkeywordstatus) - jednoduché select menu
 - Overview>Topics&Kewords>Doplňkové klíčové slovo IPR(INSPIREstatus) - mnohonásobné select menu
 - Overview>Topics&Kewords>Klíčové slovo GEMET(GEMETstatus) - jednoduché select menu
